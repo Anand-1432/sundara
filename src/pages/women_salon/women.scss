@@ -1,0 +1,22 @@
+.womenCon{
+    width: 80%;
+    margin: auto;
+    display: grid;
+    place-content: center;
+    margin-top: 50px;
+    height: 250px;
+    border-radius: 10px;
+    background-image: url("../../assets/salonbg1.png");
+    background-position: center;
+    background-size: cover;
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+}
+
+@media (max-width:500px) {
+    .womenCon{
+        width: 95%;
+        height: 200px;
+    }
+}

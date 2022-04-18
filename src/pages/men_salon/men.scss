@@ -1,0 +1,32 @@
+.salonCon{
+    width: 80%;
+    margin: auto;
+    display: grid;
+    place-content: center;
+    margin-top: 50px;
+    height: 250px;
+    border-radius: 10px;
+    background-image: url("../../assets/salonbg.png");
+    background-position: center;
+    background-size: cover;
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+}
+.serbtn{
+    width: 100%;
+    display: grid;
+    place-content: center;
+    margin-top: -10px;
+}
+.mapCon{
+    width: 90vw;
+    margin: auto;
+}
+
+@media (max-width:500px) {
+    .salonCon{
+        width: 95%;
+        height: 200px;
+    }
+}
