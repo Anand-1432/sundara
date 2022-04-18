@@ -1,11 +1,14 @@
 .bookingCon{
-    width: 90vw;
+    width: 90%;
     margin: auto;
     padding-left: 70px;
 }
 
-@media (max-width:768px) {
+@media (max-width:600px) {
     .bookingCon{
         padding-left: 0px;
+        width: 100%;
+        display: grid;
+        place-content: center;
     }
 }
