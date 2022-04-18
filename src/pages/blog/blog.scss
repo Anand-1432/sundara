@@ -1,0 +1,26 @@
+.blog {
+
+    .blogCon {
+        width: 80%;
+        margin: auto;
+        display: grid;
+        place-content: center;
+        margin-top: 50px;
+        height: 250px;
+        border-radius: 10px;
+        background-image: url("../../assets/blog.png");
+        background-position: center;
+        background-size: cover;
+        font-size: 30px;
+        font-weight: bold;
+        color: rgb(118, 116, 116);
+    }
+
+}
+
+@media (max-width:500px) {
+    .blogCon {
+        width: 95%;
+        height: 200px;
+    }
+}

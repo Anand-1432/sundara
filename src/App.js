@@ -7,6 +7,8 @@ import Dashboard from "./pages/dashboard/Dashboard";
 import Men from "./pages/men_salon/Men";
 import Women from "./pages/women_salon/Women";
 import Booking from "./pages/booking/Booking";
+import Team from "./pages/team/Team";
+import Blog from "./pages/blog/Blog";
 
 
 function App() {
@@ -22,6 +24,8 @@ function App() {
         <Route path="/salon_nearby/men_salon" element={<Men/>}/>
         <Route path="/salon_nearby/women_salon" element={<Women/>}/>
         <Route path="/booking" element={<Booking/>}/>
+        <Route path="/team" element={<Team/>}/>
+        <Route path="/blog" element={<Blog/>}/>
       </Routes>
     </>
   );
