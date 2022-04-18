@@ -3,62 +3,63 @@ import './women.scss'
 import Salonmencard from '../../components/salonmen/Salonmencard';
 
 import images from '../../assets/w1.png'
+import Footer from '../../components/footer/Footer';
 
 const Women = () => {
 
-    const Arr2 = [
-        {
-          id: 1,
-          name: 'anand'
-        },
-        {
-          id: 2,
-          name: 'anand'
-        },
-        {
-          id: 3,
-          name: 'anand'
-        },
-        {
-          id: 4,
-          name: 'anand'
-        },
-        {
-          id: 5,
-          name: 'anand'
-        },
-        {
-          id: 6,
-          name: 'anand'
-        },
-        {
-          id: 7,
-          name: 'anand'
-        },
-        {
-          id: 8,
-          name: 'anand'
-        },
-        {
-          id: 9,
-          name: 'anand'
-        },
-        {
-          id: 10,
-          name: 'anand'
-        },
-      ]
+  const Arr2 = [
+    {
+      id: 1,
+      name: 'anand'
+    },
+    {
+      id: 2,
+      name: 'anand'
+    },
+    {
+      id: 3,
+      name: 'anand'
+    },
+    {
+      id: 4,
+      name: 'anand'
+    },
+    {
+      id: 5,
+      name: 'anand'
+    },
+    {
+      id: 6,
+      name: 'anand'
+    },
+    {
+      id: 7,
+      name: 'anand'
+    },
+    {
+      id: 8,
+      name: 'anand'
+    },
+    {
+      id: 9,
+      name: 'anand'
+    },
+    {
+      id: 10,
+      name: 'anand'
+    },
+  ]
 
 
-    return (
-        <>
-            <div className='womenCon'>Bridal</div>
+  return (
+    <>
+      <div className='womenCon'>Bridal</div>
 
-            <div className='serbtn'>
-                <button className='btn btn-primary serbtn'>Add New Services</button>
-            </div>
+      <div className='serbtn'>
+        <button className='btn btn-primary serbtn'>Add New Services</button>
+      </div>
 
-        <div className='mapCon'>
+      <div className='mapCon'>
         {Arr2.map((value, index) => {
           return (
             <Salonmencard
@@ -69,8 +70,9 @@ const Women = () => {
         })}
       </div>
 
-        </>
-    )
+      <Footer />
+    </>
+  )
 }
 
 export default Women

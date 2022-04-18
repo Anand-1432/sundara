@@ -1,6 +1,5 @@
 import Navbar from "./components/navbar/Navbar";
 import Home from "./pages/home/Home";
-import Footer from './components/footer/Footer';
 import { Route, Routes } from "react-router-dom";
 import Login from "./components/login/Login";
 import { useState } from "react";
@@ -24,7 +23,6 @@ function App() {
         <Route path="/salon_nearby/women_salon" element={<Women/>}/>
         <Route path="/booking" element={<Booking/>}/>
       </Routes>
-      <Footer/>
     </>
   );
 }

@@ -24,6 +24,7 @@ import p2 from '../../assets/image.jpg'
 import Slider from '../../components/slider/Slider';
 
 import r1 from '../../assets/r1.png'
+import Footer from '../../components/footer/Footer'
 
 const Home = () => {
   return (
@@ -180,6 +181,8 @@ const Home = () => {
           </div>
         </div>
       </div>
+
+      <Footer/>
 
     </>
   )

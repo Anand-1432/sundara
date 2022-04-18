@@ -15,6 +15,7 @@ import b3 from '../../assets/b3.jpg'
 import Card from '../../components/card/Card';
 
 import Banner from '../../assets/Banner.png'
+import Footer from '../../components/footer/Footer';
 
 const Dashboard = () => {
     return (
@@ -121,6 +122,8 @@ const Dashboard = () => {
                     </div>
                 </div>
             </div>
+            
+            <Footer/>
 
         </>
     )

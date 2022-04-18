@@ -1,5 +1,6 @@
 import React from 'react'
 import Bookingcard from '../../components/booking_card/Bookingcard'
+import Footer from '../../components/footer/Footer'
 import './booking.scss'
 
 const Booking = () => {
@@ -58,6 +59,9 @@ const Booking = () => {
                     );
                 })}
             </div>
+
+<Footer/>
+
         </>
     )
 }

@@ -2,6 +2,7 @@ import React from 'react'
 import Salonmencard from '../../components/salonmen/Salonmencard';
 import './men.scss';
 import images from '../../assets/men1.png'
+import Footer from '../../components/footer/Footer';
 
 
 const Men = () => {
@@ -68,6 +69,7 @@ const Men = () => {
         })}
       </div>
 
+      <Footer />
 
     </>
   )
