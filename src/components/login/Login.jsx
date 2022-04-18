@@ -1,6 +1,5 @@
 import React from 'react'
 import './login.scss'
-import Call from '@material-ui/icons/Call';
 
 const Login = (props) => {
 
@@ -38,7 +37,6 @@ const Login = (props) => {
                                 <option value="">+91</option>
                             </select>
                             <input type="text" name="phone" id="" placeholder='Enter your number' />
-                            <span><Call htmlColor='grey' /></span>
                         </div>
 
                         <section>Password</section>
@@ -60,10 +58,10 @@ const Login = (props) => {
                     <div id='toggle2'>
                         <p>Register Now</p>
 
-                        <section style={{ marginTop: '20px' }}>Full Name</section>
+                        <section style={{ marginTop: '15px' }}>Full Name</section>
                         <input type="Text" name="phone" id="pass" placeholder='Enter your Name' />
 
-                        <section style={{ marginTop: '20px' }}>Mobile No</section>
+                        <section style={{ marginTop: '15px' }}>Mobile No</section>
                         <div className='inpSection'>
                             <select name="" id="">
                                 <option value="">+91</option>
@@ -72,17 +70,16 @@ const Login = (props) => {
                                 <option value="">+91</option>
                             </select>
                             <input type="text" name="phone" id="" placeholder='Enter your number' />
-                            <span><Call htmlColor='grey' /></span>
                         </div>
 
 
-                        <section style={{ marginTop: '20px' }}>Password</section>
+                        <section style={{ marginTop: '15px' }}>Password</section>
                         <input type="password" name="phone" id="pass" placeholder='Enter your password' />
 
-                        <section style={{ marginTop: '20px' }}>Confirm Password</section>
+                        <section style={{ marginTop: '15px' }}>Confirm Password</section>
                         <input type="password" name="phone" id="pass" placeholder='Enter your password' />
 
-                        <section style={{ marginTop: '20px' }}>State</section>
+                        <section style={{ marginTop: '15px' }}>State</section>
                         <select name="" id="state">
                             <option value="">Madhya pradesh</option>
                             <option value="">Uttar pradesh</option>

@@ -1,4 +1,11 @@
 .bookingCon{
     width: 90vw;
     margin: auto;
+    padding-left: 70px;
+}
+
+@media (max-width:768px) {
+    .bookingCon{
+        padding-left: 0px;
+    }
 }

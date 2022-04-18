@@ -50,7 +50,7 @@ const Booking = () => {
 
                 {Arr3.map((value, index) => {
                     return (
-
+                        
                         <Bookingcard
                             key={value.id}
                             name={value.name}
