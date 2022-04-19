@@ -100,36 +100,40 @@ const Profile = () => {
 
             <div className='conatiner bookdate'>
                 <div className='row'>
-                    <div className='col-xl-4 col-lg-4 text'>
-                        <p>Booking History</p>
+                    <div className='col-xl-4 col-lg-4 boxCon'>
+                        <div className='box1'>
+                            <p>Booking History</p>
+                        </div>
                     </div>
-                    <div className='col-xl-4 col-lg-4 selectBox'>
-                        <div>
-                            <select name="" id="">
-                                <option value="">DD</option>
-                            </select>
-                            <select name="" id="">
-                                <option value="">MM</option>
-                            </select>
-                            <select name="" id="">
-                                <option value="">YY</option>
+                    <div className='col-xl-4 col-lg-4 boxCon'>
+                        <div className='box2'>
+                            <div>
+                                <select name="" id="">
+                                    <option value="">DD</option>
+                                </select>
+                                <select name="" id="">
+                                    <option value="">MM</option>
+                                </select>
+                                <select name="" id="">
+                                    <option value="">YY</option>
+                                </select>
+                            </div>
+                            <select name="" id="status">
+                                <option value="">Status</option>
                             </select>
                         </div>
-                        <select name="" id="status">
-                            <option value="">Status</option>
-                        </select>
-
                     </div>
-                    <div className='col-xl-4 col-lg-4 searchSection'>
-
-                        <form class="form-inline">
-                            <input id='sea' class="form-control" type="search" placeholder="Search" aria-label="Search" />
-                            <button class="btn"><SearchIcon /></button>
-                        </form>
-
+                    <div className='col-xl-4 col-lg-4 boxCon'>
+                        <div className='box3'>
+                            <form class="form-inline">
+                                <input id='sea' class="form-control" type="search" placeholder="Search" aria-label="Search" />
+                                <button class="btn"><SearchIcon /></button>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
+
 
             <div className='table-responsive'>
                 <table className='fulldata'>
