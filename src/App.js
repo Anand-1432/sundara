@@ -10,6 +10,7 @@ import Booking from "./pages/booking/Booking";
 import Team from "./pages/team/Team";
 import Blog from "./pages/blog/Blog";
 import Profile from "./pages/profile/Profile";
+import Offer from "./pages/offer/Offer";
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
         <Route path="/salon_nearby/women_salon" element={<Women/>}/>
         <Route path="/booking" element={<Booking/>}/>
         <Route path="/team" element={<Team/>}/>
+        <Route path="/offer" element={<Offer/>}/>
         <Route path="/blog" element={<Blog/>}/>
         <Route path="/profile" element={<Profile/>}/>
       </Routes>

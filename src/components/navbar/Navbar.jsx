@@ -43,6 +43,9 @@ const Navbar = (props) => {
                 <NavLink style={{ textDecoration: 'none', color: 'black', margin: '0px 10px 0px 10px' }} activeClassName='active' className="nav-link" to="/team">Team</NavLink>
               </li>
               <li className="nav-item">
+                <NavLink style={{ textDecoration: 'none', color: 'black', margin: '0px 10px 0px 10px' }} activeClassName='active' className="nav-link" to="/offer">Offer</NavLink>
+              </li>
+              <li className="nav-item">
                 <NavLink style={{ textDecoration: 'none', color: 'black', margin: '0px 10px 0px 10px' }} activeClassName='active' className="nav-link" to="/blog">Blog</NavLink>
               </li>
               <li className="nav-item">
