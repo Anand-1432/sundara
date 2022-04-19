@@ -18,14 +18,17 @@
 
 }
 
-.offCon{
+.offCon {
     width: 90vw;
     margin: auto;
 }
 
 @media (max-width:500px) {
-    .blogCon {
-        width: 95%;
-        height: 200px;
+    .offer {
+
+        .blogCon {
+            width: 95%;
+            height: 200px;
+        }
     }
 }
