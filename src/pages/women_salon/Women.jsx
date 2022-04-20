@@ -1,52 +1,35 @@
 import React from 'react'
 import './women.scss'
-import Salonmencard from '../../components/salonmen/Salonmencard';
 
-import images from '../../assets/w1.png'
 import Footer from '../../components/footer/Footer';
+import Salonwomen from '../../components/salonwomen/Salonwomen';
 
 const Women = () => {
 
   const Arr2 = [
     {
       id: 1,
-      name: 'anand'
+      title: 'Hair color off 20%',
+      img: 'https://picsum.photos/seed/picsum/500/300',
+      data: "Some quick example text to build on the card title and make up the bulk of the card's content."
     },
     {
       id: 2,
-      name: 'anand'
+      title: 'Hair color off 20%',
+      img: 'https://picsum.photos/seed/picsum/500/300',
+      data: "Some quick example text to build on the card title and make up the bulk of the card's content."
     },
     {
       id: 3,
-      name: 'anand'
+      title: 'Hair color off 20%',
+      img: 'https://picsum.photos/seed/picsum/500/300',
+      data: "Some quick example text to build on the card title and make up the bulk of the card's content."
     },
     {
       id: 4,
-      name: 'anand'
-    },
-    {
-      id: 5,
-      name: 'anand'
-    },
-    {
-      id: 6,
-      name: 'anand'
-    },
-    {
-      id: 7,
-      name: 'anand'
-    },
-    {
-      id: 8,
-      name: 'anand'
-    },
-    {
-      id: 9,
-      name: 'anand'
-    },
-    {
-      id: 10,
-      name: 'anand'
+      title: 'Hair color off 20%',
+      img: 'https://picsum.photos/seed/picsum/500/300',
+      data: "Some quick example text to build on the card title and make up the bulk of the card's content."
     },
   ]
 
@@ -62,9 +45,11 @@ const Women = () => {
       <div className='mapCon'>
         {Arr2.map((value, index) => {
           return (
-            <Salonmencard
+            <Salonwomen
               key={value.id}
-              img={images}
+              title={value.title}
+              img={value.img}
+              data={value.data}
             />
           );
         })}

@@ -37,7 +37,7 @@ const Profile = () => {
             <div className='container proData'>
                 <div className='row'>
                     <div className='col-xl-6 col-lg-6 col-md-6 data'>
-                        <img src={profile} alt="" srcset="" />
+                        <img src={profile} alt="..." />
                         <div className='p'>
                             Steve Smith <br />
                             <span id='id'>Steveexample@gmail.com</span> <br />

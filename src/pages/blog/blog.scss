@@ -19,8 +19,10 @@
 }
 
 @media (max-width:500px) {
-    .blogCon {
-        width: 95%;
-        height: 200px;
+    .blog {
+        .blogCon {
+            width: 95%;
+            height: 200px;
+        }
     }
 }

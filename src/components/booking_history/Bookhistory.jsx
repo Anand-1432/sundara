@@ -9,43 +9,59 @@ const Bookhistory = () => {
     const tableData = [
         {
             id: 1,
-            name: 'anand'
+            name: 'anand',
+            time:'12',
+            amount:'1234',
+            status:'Done'
         },
         {
             id: 2,
-            name: 'anand'
+            name: 'anand',
+            time:'12',
+            amount:'1234',
+            status:'Done'
         },
         {
             id: 3,
-            name: 'anand'
+            name: 'anand',
+            time:'12',
+            amount:'1234',
+            status:'Done'
         },
         {
             id: 4,
-            name: 'anand'
+            name: 'anand',
+            time:'12',
+            amount:'1234',
+            status:'Done'
         },
         {
             id: 5,
-            name: 'anand'
+            name: 'anand',
+            time:'12',
+            amount:'1234',
+            status:'Done'
         },
         {
             id: 6,
-            name: 'anand'
+            name: 'anand',
+            time:'12',
+            amount:'1234',
+            status:'Done'
         },
         {
             id: 7,
-            name: 'anand'
+            name: 'anand',
+            time:'12',
+            amount:'1234',
+            status:'Done'
         },
         {
             id: 8,
-            name: 'anand'
-        },
-        {
-            id: 9,
-            name: 'anand'
-        },
-        {
-            id: 10,
-            name: 'anand'
+            name: 'anand',
+            time:'12',
+            amount:'1234',
+            status:'Done'
         },
     ]
 
@@ -81,9 +97,9 @@ const Bookhistory = () => {
                     </div>
                     <div className='col-xl-4 col-lg-4 boxCon'>
                         <div className='box3'>
-                            <form class="form-inline">
+                            <form className="form-inline">
                                 <input id='sea' class="form-control" type="search" placeholder="Search" aria-label="Search" />
-                                <button class="btn"><SearchIcon /></button>
+                                <button className="btn"><SearchIcon /></button>
                             </form>
                         </div>
                     </div>
@@ -104,12 +120,12 @@ const Bookhistory = () => {
 
                         {tableData.map((value, index) => {
                             return (
-                                <tr>
-                                    <td>Anand Rao Gaikwad</td>
-                                    <td>213132</td>
-                                    <td>3:00 Pm</td>
-                                    <td>300</td>
-                                    <td>Done</td>
+                                <tr key={index}>
+                                    <td>{value.name}</td>
+                                    <td>{value.id}</td>
+                                    <td>{value.time}:00 Pm</td>
+                                    <td>{value.amount}</td>
+                                    <td>{value.status}</td>
                                 </tr>
                             );
                         })}

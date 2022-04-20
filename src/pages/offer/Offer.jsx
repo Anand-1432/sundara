@@ -2,27 +2,34 @@ import React from 'react'
 import Footer from '../../components/footer/Footer'
 import './offer.scss'
 
-import Salonmencard from '../../components/salonmen/Salonmencard';
-import images from '../../assets/ofimg.png'
+import Offercard from '../../components/offer_card/Offercard'
 
 const Offer = () => {
 
     const Off = [
         {
             id: 1,
-            name: 'anand'
+            title: 'Hair color off 20%',
+            img:'https://picsum.photos/seed/picsum/500/300',
+            data:"Some quick example text to build on the card title and make up the bulk of the card's content."
         },
         {
             id: 2,
-            name: 'anand'
+            title: 'Hair color off 20%',
+            img:'https://picsum.photos/seed/picsum/500/300',
+            data:"Some quick example text to build on the card title and make up the bulk of the card's content."
         },
         {
-            id: 2,
-            name: 'anand'
+            id: 3,
+            title: 'Hair color off 20%',
+            img:'https://picsum.photos/seed/picsum/500/300',
+            data:"Some quick example text to build on the card title and make up the bulk of the card's content."
         },
         {
-            id: 2,
-            name: 'anand'
+            id: 4,
+            title: 'Hair color off 20%',
+            img:'https://picsum.photos/seed/picsum/500/300',
+            data:"Some quick example text to build on the card title and make up the bulk of the card's content."
         },
     ]
 
@@ -39,9 +46,11 @@ const Offer = () => {
             <div className='offCon'>
                 {Off.map((value, index) => {
                     return (
-                        <Salonmencard
+                        <Offercard
                             key={value.id}
-                            img={images}
+                            img={value.img}
+                            title={value.title}
+                            data={value.data}
                         />
                     );
                 })}

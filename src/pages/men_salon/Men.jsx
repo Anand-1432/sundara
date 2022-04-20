@@ -1,7 +1,7 @@
 import React from 'react'
 import Salonmencard from '../../components/salonmen/Salonmencard';
 import './men.scss';
-import images from '../../assets/men1.png'
+
 import Footer from '../../components/footer/Footer';
 
 
@@ -10,43 +10,27 @@ const Men = () => {
   const Arr1 = [
     {
       id: 1,
-      name: 'anand'
+      title: 'Hair color off 20%',
+      img: 'https://picsum.photos/seed/picsum/500/300',
+      data: "Some quick example text to build on the card title and make up the bulk of the card's content."
     },
     {
       id: 2,
-      name: 'anand'
+      title: 'Hair color off 20%',
+      img: 'https://picsum.photos/seed/picsum/500/300',
+      data: "Some quick example text to build on the card title and make up the bulk of the card's content."
     },
     {
       id: 3,
-      name: 'anand'
+      title: 'Hair color off 20%',
+      img: 'https://picsum.photos/seed/picsum/500/300',
+      data: "Some quick example text to build on the card title and make up the bulk of the card's content."
     },
     {
       id: 4,
-      name: 'anand'
-    },
-    {
-      id: 5,
-      name: 'anand'
-    },
-    {
-      id: 6,
-      name: 'anand'
-    },
-    {
-      id: 7,
-      name: 'anand'
-    },
-    {
-      id: 8,
-      name: 'anand'
-    },
-    {
-      id: 9,
-      name: 'anand'
-    },
-    {
-      id: 10,
-      name: 'anand'
+      title: 'Hair color off 20%',
+      img: 'https://picsum.photos/seed/picsum/500/300',
+      data: "Some quick example text to build on the card title and make up the bulk of the card's content."
     },
   ]
 
@@ -63,7 +47,9 @@ const Men = () => {
           return (
             <Salonmencard
               key={value.id}
-              img={images}
+              img={value.img}
+              title={value.title}
+              data={value.data}
             />
           );
         })}
