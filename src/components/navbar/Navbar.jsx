@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './navbar.scss'
 import PersonIcon from '@material-ui/icons/Person';
 
@@ -7,22 +7,24 @@ import { NavLink, Link } from 'react-router-dom';
 
 const Navbar = (props) => {
 
+  const [show, setshow] = useState(false);
+
   return (
     <>
       <nav className="navbar navbar-expand-lg navbar-dark">
         <div className="container-fluid">
           <a className="navbar-brand" href="/"><img src={logo} alt="..." /></a>
-          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <button onClick={()=>setshow(!show)} className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
-          <div className="collapse navbar-collapse" id="navbarSupportedContent">
+          <div className={`collapse navbar-collapse ${show ? "show" : ""}`}>
             <ul className="navbar-nav m-auto mb-2 mb-lg-0">
 
               <li className="nav-item">
-                <NavLink style={{ textDecoration: 'none', color: 'black', margin: '0px 10px 0px 10px' }} activeClassName='active' className="nav-link" to="/">Home</NavLink>
+                <NavLink onClick={()=>setshow(false)} style={{ textDecoration: 'none', color: 'black', margin: '0px 10px 0px 10px' }} activeClassName='active' className="nav-link" to="/">Home</NavLink>
               </li>
               <li className="nav-item">
-                <NavLink style={{ textDecoration: 'none', color: 'black', margin: '0px 10px 0px 10px' }} activeClassName='active' className="nav-link" to="/dashboard">Dashboard</NavLink>
+                <NavLink onClick={()=>setshow(false)} style={{ textDecoration: 'none', color: 'black', margin: '0px 10px 0px 10px' }} activeClassName='active' className="nav-link" to="/dashboard">Dashboard</NavLink>
               </li>
 
               <li className="nav-item dropdown">
@@ -31,28 +33,28 @@ const Navbar = (props) => {
                   Salon Nearby
                 </Link>
                 <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><Link className="dropdown-item text-center" to="/salon_nearby/men_salon">Men Salon</Link></li>
-                  <li><Link className="dropdown-item text-center" to="/salon_nearby/women_salon">Women Salon</Link></li>
+                  <li><Link onClick={()=>setshow(false)} className="dropdown-item text-center" to="/salon_nearby/men_salon">Men Salon</Link></li>
+                  <li><Link onClick={()=>setshow(false)} className="dropdown-item text-center" to="/salon_nearby/women_salon">Women Salon</Link></li>
                 </ul>
               </li>
 
               <li className="nav-item">
-                <NavLink style={{ textDecoration: 'none', color: 'black', margin: '0px 10px 0px 10px' }} activeClassName='active' className="nav-link" to="/category">Category</NavLink>
+                <NavLink onClick={()=>setshow(false)} style={{ textDecoration: 'none', color: 'black', margin: '0px 10px 0px 10px' }} activeClassName='active' className="nav-link" to="/category">Category</NavLink>
               </li>
               <li className="nav-item">
-                <NavLink style={{ textDecoration: 'none', color: 'black', margin: '0px 10px 0px 10px' }} activeClassName='active' className="nav-link" to="/booking">Booking</NavLink>
+                <NavLink onClick={()=>setshow(false)} style={{ textDecoration: 'none', color: 'black', margin: '0px 10px 0px 10px' }} activeClassName='active' className="nav-link" to="/booking">Booking</NavLink>
               </li>
               <li className="nav-item">
-                <NavLink style={{ textDecoration: 'none', color: 'black', margin: '0px 10px 0px 10px' }} activeClassName='active' className="nav-link" to="/team">Team</NavLink>
+                <NavLink onClick={()=>setshow(false)} style={{ textDecoration: 'none', color: 'black', margin: '0px 10px 0px 10px' }} activeClassName='active' className="nav-link" to="/team">Team</NavLink>
               </li>
               <li className="nav-item">
-                <NavLink style={{ textDecoration: 'none', color: 'black', margin: '0px 10px 0px 10px' }} activeClassName='active' className="nav-link" to="/offer">Offer</NavLink>
+                <NavLink onClick={()=>setshow(false)} style={{ textDecoration: 'none', color: 'black', margin: '0px 10px 0px 10px' }} activeClassName='active' className="nav-link" to="/offer">Offer</NavLink>
               </li>
               <li className="nav-item">
-                <NavLink style={{ textDecoration: 'none', color: 'black', margin: '0px 10px 0px 10px' }} activeClassName='active' className="nav-link" to="/blog">Blog</NavLink>
+                <NavLink onClick={()=>setshow(false)} style={{ textDecoration: 'none', color: 'black', margin: '0px 10px 0px 10px' }} activeClassName='active' className="nav-link" to="/blog">Blog</NavLink>
               </li>
               <li className="nav-item">
-                <NavLink style={{ textDecoration: 'none', color: 'black', margin: '0px 10px 0px 10px' }} activeClassName='active' className="nav-link" to="/profile">Profile</NavLink>
+                <NavLink onClick={()=>setshow(false)} style={{ textDecoration: 'none', color: 'black', margin: '0px 10px 0px 10px' }} activeClassName='active' className="nav-link" to="/profile">Profile</NavLink>
               </li>
 
             </ul>

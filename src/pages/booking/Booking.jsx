@@ -19,10 +19,6 @@ const Booking = () => {
             name: "anand"
         },
         {
-            id: 3,
-            name: "anand"
-        },
-        {
             id: 4,
             name: "anand"
         },
@@ -40,6 +36,10 @@ const Booking = () => {
         },
         {
             id: 8,
+            name: "anand"
+        },
+        {
+            id: 9,
             name: "anand"
         },
     ]
