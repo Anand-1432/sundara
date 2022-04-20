@@ -12,14 +12,17 @@ import Editprofile from '../../components/editprofile/Editprofile';
 import Bookhistory from '../../components/booking_history/Bookhistory';
 import Terms from '../../components/terms&conditions/Terms';
 import Privacy from '../../components/privacypolicy/Privacy';
+import Passpop from '../../components/Password_popup/Passpop';
 
 const Profile = () => {
 
     const [edit, setedit] = useState(false);
 
-    const [book, setbook] = useState(true)
-    const [term, setterm] = useState(false)
-    const [policy, setpolicy] = useState(false)
+    const [book, setbook] = useState(true);
+    const [term, setterm] = useState(false);
+    const [policy, setpolicy] = useState(false);
+
+    const [pop, setpop] = useState(false);
 
     return (
         <>
@@ -28,6 +31,7 @@ const Profile = () => {
                 show={edit}
                 fun={setedit}
             />
+        
 
             <div className='proCon'></div>
             <div className='container proData'>
@@ -37,7 +41,7 @@ const Profile = () => {
                         <div className='p'>
                             Steve Smith <br />
                             <span id='id'>Steveexample@gmail.com</span> <br />
-                            <a href='/profile' id='change'><LockIcon fontSize='small' /> Change password</a>
+                           <button id='change' onClick={()=>setpop(true)}><LockIcon fontSize='small' /> Change password</button>
                         </div>
                     </div>
                     <div className='col-xl-6 col-lg-6 col-md-6 edit'>
@@ -93,6 +97,10 @@ const Profile = () => {
             {book ? <Bookhistory /> : null}
             {term ? <Terms /> : null}
             {policy ? <Privacy /> : null}
+
+            {pop ? <Passpop
+                fun={setpop}
+            /> : null}
 
             <Footer />
         </>
