@@ -11,6 +11,7 @@ import Team from "./pages/team/Team";
 import Blog from "./pages/blog/Blog";
 import Profile from "./pages/profile/Profile";
 import Offer from "./pages/offer/Offer";
+import Category from "./pages/category/Category";
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
         <Route path="/salon_nearby/men_salon" element={<Men/>}/>
         <Route path="/salon_nearby/women_salon" element={<Women/>}/>
         <Route path="/booking" element={<Booking/>}/>
+        <Route path="/category" element={<Category/>}/>
         <Route path="/team" element={<Team/>}/>
         <Route path="/offer" element={<Offer/>}/>
         <Route path="/blog" element={<Blog/>}/>

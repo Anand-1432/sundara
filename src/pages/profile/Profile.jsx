@@ -31,7 +31,7 @@ const Profile = () => {
                 show={edit}
                 fun={setedit}
             />
-        
+
 
             <div className='proCon'></div>
             <div className='container proData'>
@@ -41,7 +41,7 @@ const Profile = () => {
                         <div className='p'>
                             Steve Smith <br />
                             <span id='id'>Steveexample@gmail.com</span> <br />
-                           <button id='change' onClick={()=>setpop(true)}><LockIcon fontSize='small' /> Change password</button>
+                            <button id='change' onClick={() => setpop(true)}><LockIcon fontSize='small' /> Change password</button>
                         </div>
                     </div>
                     <div className='col-xl-6 col-lg-6 col-md-6 edit'>
@@ -68,12 +68,12 @@ const Profile = () => {
                         </button>
                     </div>
                     <div className='col-xl-4 col-lg-4 boxCon'>
-                        <button id='button'>
-                            <div className='box' onClick={() => {
-                                setbook(false);
-                                setpolicy(false);
-                                setterm(true);
-                            }}>
+                        <button id='button' onClick={() => {
+                            setbook(false);
+                            setpolicy(false);
+                            setterm(true);
+                        }}>
+                            <div className='box'>
                                 <img src={pro2} alt="" />
                                 <p>Terms & Conditions</p>
                             </div>

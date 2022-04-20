@@ -37,6 +37,9 @@ const Navbar = (props) => {
               </li>
 
               <li className="nav-item">
+                <NavLink style={{ textDecoration: 'none', color: 'black', margin: '0px 10px 0px 10px' }} activeClassName='active' className="nav-link" to="/category">Category</NavLink>
+              </li>
+              <li className="nav-item">
                 <NavLink style={{ textDecoration: 'none', color: 'black', margin: '0px 10px 0px 10px' }} activeClassName='active' className="nav-link" to="/booking">Booking</NavLink>
               </li>
               <li className="nav-item">
