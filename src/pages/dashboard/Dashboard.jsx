@@ -22,34 +22,29 @@ import r4 from '../../assets/cat3.png'
 import r5 from '../../assets/cat4.png'
 import r6 from '../../assets/cat5.png'
 import r7 from '../../assets/cat6.png'
+import Categorycard from '../../components/categoryCard/Categorycard';
+
+import EditIcon from '@material-ui/icons/Edit';
+import DeleteIcon from '@material-ui/icons/Delete';
 
 const Dashboard = () => {
 
     const Arr3 = [
-        {
-            id: 1,
-            name: "anand"
-        },
-        {
-            id: 2,
-            name: "anand"
-        },
-        {
-            id: 3,
-            name: "anand"
-        },
-        {
-            id: 4,
-            name: "anand"
-        },
-        {
-            id: 5,
-            name: "anand"
-        },
-        {
-            id: 6,
-            name: "anand"
-        },
+        { id: 1, name: "anand" },
+        { id: 2, name: "anand" },
+        { id: 3, name: "anand" },
+        { id: 4, name: "anand" },
+        { id: 5, name: "anand" },
+        { id: 6, name: "anand" },
+    ]
+
+    const Category = [
+        { id: 1, name: "anand" },
+        { id: 2, name: "anand" },
+        { id: 3, name: "anand" },
+        { id: 4, name: "anand" },
+        { id: 5, name: "anand" },
+        { id: 6, name: "anand" },
     ]
 
 
@@ -108,96 +103,101 @@ const Dashboard = () => {
                     <span>Category</span>
                     <button className='btn'>view all category</button>
                 </div>
-                <div className='container salon category'>
-                    <div className='row'>
-                        <div className='col-xl-4 col-lg-4'>
-                            <div>
-                                <img src={r2} alt="" />
-                                <p>Hair Cut</p>
-                            </div>
-                        </div>
-                        <div className='col-xl-4 col-lg-4'>
-                            <div>
-                                <img src={r3} alt="" />
-                                <p>Kids Haircut</p>
-                            </div>
-                        </div>
-                        <div className='col-xl-4 col-lg-4'>
-                            <div>
-                                <img src={r4} alt="" />
-                                <p>Hair Color</p>
-                            </div>
-                        </div>
-                    </div>
+
+                <div className='categoryConatiner'>
+                    {Category.map((value, index) => {
+                        return (
+
+                            <Categorycard
+                                key={value.id}
+                                title={value.name}
+                            />
+
+                        );
+                    })}
                 </div>
-                <div className='container salon category'>
-                    <div className='row'>
-                        <div className='col-xl-4 col-lg-4'>
-                            <div>
-                                <img src={r5} alt="" />
-                                <p>Bridal</p>
-                            </div>
-                        </div>
-                        <div className='col-xl-4 col-lg-4'>
-                            <div>
-                                <img src={r6} alt="" />
-                                <p>Facial</p>
-                            </div>
-                        </div>
-                        <div className='col-xl-4 col-lg-4'>
-                            <div>
-                                <img src={r7} alt="" />
-                                <p>Spa</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
             </div>
 
 
-            <div className='gallery'>
+            <div className='gallery dashgallery'>
                 <h2>Our Gallery</h2>
                 <div className='container salon'>
                     <div className='row'>
-                        <div className='col-xl-4 col-lg-4'> <img src={r7} alt="" /></div>
-                        <div className='col-xl-4 col-lg-4'> <img src={r2} alt="" /></div>
-                        <div className='col-xl-4 col-lg-4'> <img src={r3} alt="" /></div>
+                        <div className='col-xl-4 col-lg-4'>
+                            <span>
+                                <img src={r7} alt="" />
+                                <button className='btn'><EditIcon /></button>
+                            </span>
+                        </div>
+                        <div className='col-xl-4 col-lg-4'>
+                            <span>
+                                <img src={r6} alt="" />
+                                <button className='btn'><EditIcon /></button>
+                            </span>
+                        </div>
+                        <div className='col-xl-4 col-lg-4'>
+                            <span>
+                                <img src={r5} alt="" />
+                                <button className='btn'><EditIcon /></button>
+                            </span>
+                        </div>
                     </div>
                 </div>
                 <div className='container salon'>
                     <div className='row'>
-                        <div className='col-xl-4 col-lg-4'> <img src={r4} alt="" /></div>
-                        <div className='col-xl-4 col-lg-4'> <img src={r5} alt="" /></div>
-                        <div className='col-xl-4 col-lg-4'> <img src={r6} alt="" /></div>
+                        <div className='col-xl-4 col-lg-4'>
+                            <span>
+                                <img src={r4} alt="" />
+                                <button className='btn'><EditIcon /></button>
+                            </span>
+                        </div>
+                        <div className='col-xl-4 col-lg-4'>
+                            <span>
+                                <img src={r3} alt="" />
+                                <button className='btn'><EditIcon /></button>
+                            </span></div>
+                        <div className='col-xl-4 col-lg-4'>
+                            <span>
+                                <img src={r2} alt="" />
+                                <button className='btn'><EditIcon /></button>
+                            </span>
+                        </div>
                     </div>
                 </div>
             </div>
 
 
             <h2 className='h2'>Our Specialist</h2>
-            <div className='team'>
+            <div className='team dashTeam'>
                 <div className=' content'>
                     <img src={e1} alt="" />
                     <h5>Emma Watson</h5>
                     <p>haircut & massage specialist</p>
+                    <button className='btn btn-outline-primary'><EditIcon/></button>
+                    <button className='btn btn-outline-dark'><DeleteIcon/></button>
                 </div>
 
                 <div className='content'>
                     <img src={e2} alt="" />
                     <h5>James Franco</h5>
                     <p> dicta, earum odit</p>
+                    <button className='btn btn-outline-primary'><EditIcon/></button>
+                    <button className='btn btn-outline-dark'><DeleteIcon/></button>
                 </div>
 
                 <div className='content'>
                     <img src={e3} alt="" />
                     <h5>San Watson</h5>
                     <p> dicta, earum</p>
+                    <button className='btn btn-outline-primary'><EditIcon/></button>
+                    <button className='btn btn-outline-dark'><DeleteIcon/></button>
                 </div>
             </div>
 
 
 
-            <div className='blog blogBg' style={{backgroundColor:'#c8f3fb'}}>
+            <div className='blog blogBg dashBlog' style={{ backgroundColor: '#c8f3fb' }}>
                 <h2>Blogs</h2>
                 <div className='container salon'>
                     <div className='row'>
@@ -207,6 +207,8 @@ const Dashboard = () => {
                                 <h5>Men Haircut New Style</h5>
                                 <p> dicta, earum odit illum ellore quos esse obcaecati perspiciatis?
                                     Dignissimos aliquid voluptates quidem</p>
+                                <button className='btn btn-primary'>Edit</button>
+                                <button className='btn btn-dark'>Delete</button>
                             </div>
                         </div>
 
@@ -216,6 +218,8 @@ const Dashboard = () => {
                                 <h5>Eyebrow Shapes</h5>
                                 <p> dicta, earum odit illum ellore quos esse obcaecati perspiciatis?
                                     Dignissimos aliquid voluptates quidem</p>
+                                <button className='btn btn-primary'>Edit</button>
+                                <button className='btn btn-dark'>Delete</button>
                             </div>
                         </div>
 
@@ -225,6 +229,8 @@ const Dashboard = () => {
                                 <h5>Top 5 Benefits Facial</h5>
                                 <p> dicta, earum odit illum ellore quos esse obcaecati perspiciatis?
                                     Dignissimos aliquid voluptates quidem</p>
+                                <button className='btn btn-primary'>Edit</button>
+                                <button className='btn btn-dark'>Delete</button>
                             </div>
                         </div>
                     </div>

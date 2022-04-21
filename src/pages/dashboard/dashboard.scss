@@ -1,4 +1,4 @@
-.chartBox{
+.chartBox {
     width: 90%;
     margin: auto;
     margin-top: 50px;
@@ -44,7 +44,8 @@
                 font-size: 20px;
                 font-family: Arial, Helvetica, sans-serif;
             }
-            section{
+
+            section {
                 margin-left: 110px;
                 margin-top: -15px;
                 font-weight: bold;
@@ -55,7 +56,55 @@
     }
 }
 
-.bookSection{
+.dashgallery {
+    span {
+        position: relative;
+
+        .btn {
+            position: absolute;
+            top: 75px;
+            left: 130px;
+            color: white;
+            background-color: rgb(0, 0, 0, 0.5);
+            border: 1px solid white;
+            display: none;
+        }
+    }
+
+    span:hover{
+        img{
+            opacity: 0.4;
+        }
+        .btn{
+            display: block;
+        }
+    }
+}
+
+.dashTeam{
+    h5{
+        margin-top: 10px !important;
+    }
+    p{
+        margin-top: -30px;
+    }
+    .btn{
+        margin: -30px 0px 20px 10px;
+    }
+}
+
+.dashBlog{
+    p{
+        margin-bottom: -10px;
+    }
+    .btn{
+        width: 100px;
+        margin: auto;
+        margin-bottom: 10px;
+    }
+}
+
+.bookSection {
     width: 100%;
     background-color: #c8f3fb;
     padding-top: 30px;
@@ -63,16 +112,28 @@
     margin-top: 70px;
 }
 
-.bookings{
+.bookings {
     width: 90%;
     margin: auto;
     padding-left: 50px;
 }
 
+.categoryConatiner {
+    width: 73%;
+    margin: auto;
+    margin-top: 50px;
+}
+
+
 @media (max-width:600px) {
-    .bookings{
+    .bookings {
         padding-left: 0px;
         width: 100%;
+        display: grid;
+        place-content: center;
+    }
+
+    .categoryConatiner {
         display: grid;
         place-content: center;
     }
