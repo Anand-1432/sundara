@@ -17,7 +17,7 @@ const Editoffer = (props) => {
                             <input type="file" name="" id="file" />
                         </div>
                         <div className='col-xl-6 col-lg-6 data'>
-                            <p>Offer title</p>
+                            <p style={{marginTop:'20px'}}>Offer title</p>
                             <input type="text" name="" id="" placeholder='Hair Color 20% off' />
 
                             <div className='conatiner price'>
@@ -34,7 +34,7 @@ const Editoffer = (props) => {
                             </div>
 
                             <p class='text'>Description</p>
-                            <textarea name="" id="" cols="43" rows="4" placeholder='long description type here..'></textarea>
+                            <textarea name="" id="" cols="48" rows="3" placeholder='long description type here..'></textarea>
 
                             <div>
                                 <button className='btn btn-primary'><SaveIcon fontSize='small' /> Save</button>

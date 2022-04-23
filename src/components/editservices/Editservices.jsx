@@ -18,7 +18,7 @@ const Editservices = (props) => {
                             <input type="file" name="" id="file" />
                         </div>
                         <div className='col-xl-6 col-lg-6 data'>
-                            <p>Services name</p>
+                            <p style={{marginTop:'20px'}}>Services name</p>
                             <input type="text" name="" id="" placeholder='Hair Cut' />
 
                             <div className='conatiner price'>
@@ -36,11 +36,11 @@ const Editservices = (props) => {
 
 
 
-                            <p id='text'>Short Description</p>
-                            <input type="text" name="" id="" placeholder="it's services good for clients" />
+                            {/* <p id='text'>Short Description</p>
+                            <input type="text" name="" id="" placeholder="it's services good for clients" /> */}
 
                             <p class='text'>Description</p>
-                            <textarea name="" id="" cols="43" rows="4"></textarea>
+                            <textarea name="" id="" cols="48" rows="3"></textarea>
                          
                             <div>
                             <button className='btn btn-primary'><SaveIcon fontSize='small' /> Save</button>
