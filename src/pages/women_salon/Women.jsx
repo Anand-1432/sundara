@@ -1,10 +1,15 @@
-import React from 'react'
+import React, {useState} from 'react'
 import './women.scss'
 
 import Footer from '../../components/footer/Footer';
 import Salonwomen from '../../components/salonwomen/Salonwomen';
+import Editservices from '../../components/editservices/Editservices';
+
+import notfound from '../../assets/notfound.png'
 
 const Women = () => {
+
+  const [edit, setedit] = useState(false);
 
   const Arr2 = [
     {
@@ -36,10 +41,13 @@ const Women = () => {
 
   return (
     <>
+         
+         {edit ? <Editservices img={notfound} fun={setedit} /> : null}
+
       <div className='womenCon'>Bridal</div>
 
       <div className='serbtn'>
-        <button className='btn btn-primary serbtn'>Add New Services</button>
+        <button className='btn btn-primary serbtn' onClick={() => { setedit(true) }}>Add New Services</button>
       </div>
 
       <div className='mapCon'>

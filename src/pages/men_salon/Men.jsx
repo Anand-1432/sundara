@@ -1,11 +1,16 @@
-import React from 'react'
-import Salonmencard from '../../components/salonmen/Salonmencard';
+import React, { useState } from 'react'
 import './men.scss';
 
+import Salonmencard from '../../components/salonmen/Salonmencard';
+import Editservices from '../../components/editservices/Editservices';
 import Footer from '../../components/footer/Footer';
+
+import notfound from '../../assets/notfound.png'
 
 
 const Men = () => {
+
+  const [edit, setedit] = useState(false);
 
   const Arr1 = [
     {
@@ -36,10 +41,13 @@ const Men = () => {
 
   return (
     <>
+
+      {edit ? <Editservices img={notfound} fun={setedit} /> : null}
+
       <div className='salonCon'>Hair Cut</div>
 
       <div className='serbtn'>
-        <button className='btn btn-primary serbtn'>Add New Services</button>
+        <button className='btn btn-primary serbtn' onClick={() => { setedit(true) }}>Add New Services</button>
       </div>
 
       <div className='mapCon'>

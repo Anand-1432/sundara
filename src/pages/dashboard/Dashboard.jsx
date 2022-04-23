@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Chart from '../../components/Chart/Chart';
 import Footer from '../../components/footer/Footer'
 import './dashboard.scss'
@@ -26,8 +26,11 @@ import Categorycard from '../../components/categoryCard/Categorycard';
 
 import EditIcon from '@material-ui/icons/Edit';
 import DeleteIcon from '@material-ui/icons/Delete';
+import Gallerycard from '../../components/gallery_card/Gallerycard';
 
 const Dashboard = () => {
+
+    const [gallery, setgallery] = useState(false);
 
     const Arr3 = [
         { id: 1, name: "anand" },
@@ -45,6 +48,15 @@ const Dashboard = () => {
         { id: 4, name: "anand" },
         { id: 5, name: "anand" },
         { id: 6, name: "anand" },
+    ]
+
+    const Gallery = [
+        { id: 1, title: "Hair Cut", img:r2 },
+        { id: 2, title: "Kids Haircut", img:r3 },
+        { id: 3, title: "Hair Color", img:r4 },
+        { id: 4, title: "Bridal", img:r5 },
+        { id: 5, title: "Facial", img:r6 },
+        { id: 6, title: "Spa", img:r7 },
     ]
 
 
@@ -118,53 +130,32 @@ const Dashboard = () => {
                 </div>
 
             </div>
+            {/* /////////////////////////////////////////////////////////////////////////////////////////////////////////            */}
 
 
-            <div className='gallery dashgallery'>
+            {/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////           */}
+
+
+
+            <div className='gallery '>
                 <h2>Our Gallery</h2>
-                <div className='container salon'>
-                    <div className='row'>
-                        <div className='col-xl-4 col-lg-4'>
-                            <span>
-                                <img src={r7} alt="" />
-                                <button className='btn'><EditIcon /></button>
-                            </span>
-                        </div>
-                        <div className='col-xl-4 col-lg-4'>
-                            <span>
-                                <img src={r6} alt="" />
-                                <button className='btn'><EditIcon /></button>
-                            </span>
-                        </div>
-                        <div className='col-xl-4 col-lg-4'>
-                            <span>
-                                <img src={r5} alt="" />
-                                <button className='btn'><EditIcon /></button>
-                            </span>
-                        </div>
-                    </div>
+                <div className='categoryConatiner'>
+                    {Gallery.map((value, index) => {
+                        return (
+
+                                <Gallerycard
+                                    key={value.id}
+                                    title={value.title}
+                                    img={value.img}
+                                    fun={setgallery}
+
+                                    notuse={gallery}
+                                />
+
+                        );
+                    })}
                 </div>
-                <div className='container salon'>
-                    <div className='row'>
-                        <div className='col-xl-4 col-lg-4'>
-                            <span>
-                                <img src={r4} alt="" />
-                                <button className='btn'><EditIcon /></button>
-                            </span>
-                        </div>
-                        <div className='col-xl-4 col-lg-4'>
-                            <span>
-                                <img src={r3} alt="" />
-                                <button className='btn'><EditIcon /></button>
-                            </span></div>
-                        <div className='col-xl-4 col-lg-4'>
-                            <span>
-                                <img src={r2} alt="" />
-                                <button className='btn'><EditIcon /></button>
-                            </span>
-                        </div>
-                    </div>
-                </div>
+
             </div>
 
 
@@ -174,24 +165,24 @@ const Dashboard = () => {
                     <img src={e1} alt="" />
                     <h5>Emma Watson</h5>
                     <p>haircut & massage specialist</p>
-                    <button className='btn btn-outline-primary'><EditIcon/></button>
-                    <button className='btn btn-outline-dark'><DeleteIcon/></button>
+                    <button className='btn btn-outline-primary'><EditIcon /></button>
+                    <button className='btn btn-outline-dark'><DeleteIcon /></button>
                 </div>
 
                 <div className='content'>
                     <img src={e2} alt="" />
                     <h5>James Franco</h5>
                     <p> dicta, earum odit</p>
-                    <button className='btn btn-outline-primary'><EditIcon/></button>
-                    <button className='btn btn-outline-dark'><DeleteIcon/></button>
+                    <button className='btn btn-outline-primary'><EditIcon /></button>
+                    <button className='btn btn-outline-dark'><DeleteIcon /></button>
                 </div>
 
                 <div className='content'>
                     <img src={e3} alt="" />
                     <h5>San Watson</h5>
                     <p> dicta, earum</p>
-                    <button className='btn btn-outline-primary'><EditIcon/></button>
-                    <button className='btn btn-outline-dark'><DeleteIcon/></button>
+                    <button className='btn btn-outline-primary'><EditIcon /></button>
+                    <button className='btn btn-outline-dark'><DeleteIcon /></button>
                 </div>
             </div>
 

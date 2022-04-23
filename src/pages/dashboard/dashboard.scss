@@ -56,30 +56,6 @@
     }
 }
 
-.dashgallery {
-    span {
-        position: relative;
-
-        .btn {
-            position: absolute;
-            top: 75px;
-            left: 130px;
-            color: white;
-            background-color: rgb(0, 0, 0, 0.5);
-            border: 1px solid white;
-            display: none;
-        }
-    }
-
-    span:hover{
-        img{
-            opacity: 0.4;
-        }
-        .btn{
-            display: block;
-        }
-    }
-}
 
 .dashTeam{
     h5{

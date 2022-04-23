@@ -1,10 +1,15 @@
-import React from 'react'
+import React, {useState} from 'react'
 import Footer from '../../components/footer/Footer'
 import './offer.scss'
 
 import Offercard from '../../components/offer_card/Offercard'
+import Editoffer from '../../components/editoffer/Editoffer'
+
+import notfound from '../../assets/notfound.png'
 
 const Offer = () => {
+
+    const [offer, setoffer] = useState(false);
 
     const Off = [
         {
@@ -34,12 +39,15 @@ const Offer = () => {
     ]
 
     return (
-        <>
+        <>  
+
+            {offer ? <Editoffer img={notfound} fun={setoffer} /> : null}
+
             <div className='offer'>
                 <div className='blogCon'>Best Offers</div>
 
                 <div className='serbtn'>
-                    <button className='btn btn-primary serbtn'>Add New Offer</button>
+                    <button className='btn btn-primary serbtn' onClick={()=>{setoffer(true)}}>Add New Offer</button>
                 </div>
             </div>
 
