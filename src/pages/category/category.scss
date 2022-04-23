@@ -32,3 +32,10 @@
    padding-top: 1px; 
    padding-bottom: 50px; 
 }
+
+@media (max-width:768px) {
+    .categoryHead{
+        width: 90%;
+    }
+    
+}

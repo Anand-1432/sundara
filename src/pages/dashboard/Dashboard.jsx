@@ -22,15 +22,17 @@ import r4 from '../../assets/cat3.png'
 import r5 from '../../assets/cat4.png'
 import r6 from '../../assets/cat5.png'
 import r7 from '../../assets/cat6.png'
+import notfound from '../../assets/notfound.png'
 import Categorycard from '../../components/categoryCard/Categorycard';
 
-import EditIcon from '@material-ui/icons/Edit';
-import DeleteIcon from '@material-ui/icons/Delete';
 import Gallerycard from '../../components/gallery_card/Gallerycard';
+import Specialistcard from '../../components/specialist_card/Specialistcard';
+import Editspecialist from '../../components/editspecialist/Editspecialist';
 
 const Dashboard = () => {
 
     const [gallery, setgallery] = useState(false);
+    const [specialist, setspecialist] = useState(false);
 
     const Arr3 = [
         { id: 1, name: "anand" },
@@ -51,12 +53,20 @@ const Dashboard = () => {
     ]
 
     const Gallery = [
-        { id: 1, title: "Hair Cut", img:r2 },
-        { id: 2, title: "Kids Haircut", img:r3 },
-        { id: 3, title: "Hair Color", img:r4 },
-        { id: 4, title: "Bridal", img:r5 },
-        { id: 5, title: "Facial", img:r6 },
-        { id: 6, title: "Spa", img:r7 },
+        { id: 1, title: "Hair Cut", img: r2 },
+        { id: 2, title: "Kids Haircut", img: r3 },
+        { id: 3, title: "Hair Color", img: r4 },
+        { id: 4, title: "Bridal", img: r5 },
+        { id: 5, title: "Facial", img: r6 },
+        { id: 6, title: "Spa", img: r7 },
+    ]
+    const team = [
+        { id: 1, title: "Hair Cut", data: "hair specialist", img: e1 },
+        { id: 2, title: "Kids Haircut", data: "hair specialist", img: e2 },
+        { id: 3, title: "Hair Color", data: "hair specialist", img: e3 },
+        { id: 4, title: "Bridal", data: "hair specialist", img: e1 },
+        { id: 5, title: "Facial", data: "hair specialist", img: e2 },
+        { id: 6, title: "Spa", data: "hair specialist", img: e2 },
     ]
 
 
@@ -130,10 +140,6 @@ const Dashboard = () => {
                 </div>
 
             </div>
-            {/* /////////////////////////////////////////////////////////////////////////////////////////////////////////            */}
-
-
-            {/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////           */}
 
 
 
@@ -143,14 +149,14 @@ const Dashboard = () => {
                     {Gallery.map((value, index) => {
                         return (
 
-                                <Gallerycard
-                                    key={value.id}
-                                    title={value.title}
-                                    img={value.img}
-                                    fun={setgallery}
+                            <Gallerycard
+                                key={value.id}
+                                title={value.title}
+                                img={value.img}
+                                fun={setgallery}
 
-                                    notuse={gallery}
-                                />
+                                notuse={gallery}
+                            />
 
                         );
                     })}
@@ -159,32 +165,33 @@ const Dashboard = () => {
             </div>
 
 
+
+            {specialist ? <Editspecialist img={notfound} fun={setspecialist} /> : null}
+
             <h2 className='h2'>Our Specialist</h2>
-            <div className='team dashTeam'>
-                <div className=' content'>
-                    <img src={e1} alt="" />
-                    <h5>Emma Watson</h5>
-                    <p>haircut & massage specialist</p>
-                    <button className='btn btn-outline-primary'><EditIcon /></button>
-                    <button className='btn btn-outline-dark'><DeleteIcon /></button>
-                </div>
 
-                <div className='content'>
-                    <img src={e2} alt="" />
-                    <h5>James Franco</h5>
-                    <p> dicta, earum odit</p>
-                    <button className='btn btn-outline-primary'><EditIcon /></button>
-                    <button className='btn btn-outline-dark'><DeleteIcon /></button>
-                </div>
-
-                <div className='content'>
-                    <img src={e3} alt="" />
-                    <h5>San Watson</h5>
-                    <p> dicta, earum</p>
-                    <button className='btn btn-outline-primary'><EditIcon /></button>
-                    <button className='btn btn-outline-dark'><DeleteIcon /></button>
-                </div>
+            <div className='categoryHead'>
+                <span>Specialist</span>
+                <button className='btn' onClick={()=>setspecialist(true)}>Add New Specialist</button>
             </div>
+
+            <div className='team dashTeam'>
+
+                {team.map((value, index) => {
+                    return (
+
+                        <Specialistcard
+                            key={value.id}
+                            name={value.name}
+                            img={value.img}
+                            data={value.data}
+                        />
+
+                    );
+                })}
+
+            </div>
+
 
 
 
