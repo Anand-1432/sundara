@@ -33,6 +33,7 @@ const Dashboard = () => {
 
     const [gallery, setgallery] = useState(false);
     const [specialist, setspecialist] = useState(false);
+    const [categorys, setcategorys] = useState(false);
 
     const Arr3 = [
         { id: 1, name: "anand" },
@@ -44,12 +45,12 @@ const Dashboard = () => {
     ]
 
     const Category = [
-        { id: 1, name: "anand" },
-        { id: 2, name: "anand" },
-        { id: 3, name: "anand" },
-        { id: 4, name: "anand" },
-        { id: 5, name: "anand" },
-        { id: 6, name: "anand" },
+        { id: 1, name: "anand", img:r2 },
+        { id: 2, name: "anand", img:r3 },
+        { id: 3, name: "anand", img:r4 },
+        { id: 4, name: "anand", img:r5 },
+        { id: 5, name: "anand", img:r6 },
+        { id: 6, name: "anand", img:r7 },
     ]
 
     const Gallery = [
@@ -133,6 +134,10 @@ const Dashboard = () => {
                             <Categorycard
                                 key={value.id}
                                 title={value.name}
+                                img={value.img}
+                                fun={setcategorys}
+
+                                notuse={categorys}
                             />
 
                         );

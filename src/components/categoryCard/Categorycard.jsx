@@ -1,17 +1,27 @@
-import React from 'react'
+import React, {useState} from 'react'
 import './categorycard.scss';
 
-import r2 from '../../assets/cat1.png'
+import Editcategory from '../editcategory/Editcategory';
 
 const Categorycard = (props) => {
+
+    const [cat, setcat] = useState(false);
+
     return (
         <>
             <div className='categoryCard'>
-             <img src={r2} alt="" />
-             <p>{props.title}</p>
-             <button className='btn btn-primary'>Edit</button>
-             <button className='btn btn-dark'>Delete</button>
+                <img src={props.img} alt="" />
+                <p>{props.title}</p>
+                <button className='btn btn-primary' onClick={() =>setcat(true)}>Edit</button>
+                <button className='btn btn-dark'>Delete</button>
             </div>
+
+            {cat ? <Editcategory
+
+                fun={setcat}
+                img={props.img}
+
+            /> : null}
         </>
     )
 }

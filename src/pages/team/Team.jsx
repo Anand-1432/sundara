@@ -18,21 +18,21 @@ const Team = () => {
             <h2 className='h2'>Our Expert Team</h2>
             <div className='team'>
                 <div className=' content'>
-                    <img src={e1} alt="" />
+                    <img id='img' src={e1} alt="" />
                     <h5>Emma Watson</h5>
-                    <p>haircut & massage specialist</p>
+                    <p id='p1'>haircut & massage specialist</p>
                 </div>
 
                 <div className='content'>
-                    <img src={e2} alt="" />
+                    <img id='img' src={e2} alt="" />
                     <h5>James Franco</h5>
-                    <p> dicta, earum odit</p>
+                    <p id='p1'> dicta, earum odit</p>
                 </div>
 
-                <div className='content'>
-                    <img src={e3} alt="" />
+                <div id='img' className='content'>
+                    <img id='img' src={e3} alt="" />
                     <h5>San Watson</h5>
-                    <p> dicta, earum</p>
+                    <p id='p1'> dicta, earum</p>
                 </div>
             </div>
 
