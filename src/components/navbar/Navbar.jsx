@@ -30,6 +30,17 @@ const Navbar = (props) => {
               <li className="nav-item dropdown">
                 <Link className="nav-link dropdown-toggle" to="" id="navbarDropdown" role="button"
                   data-bs-toggle="dropdown" aria-expanded="false" style={{fontWeight:'500', fontFamily:'Arial'}}>
+                  Category
+                </Link>
+                <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><Link onClick={()=>setshow(false)} className="dropdown-item text-center" to="/category/men_salon">Men Salon</Link></li>
+                  <li><Link onClick={()=>setshow(false)} className="dropdown-item text-center" to="/category/women_salon">Women Salon</Link></li>
+                </ul>
+              </li>
+
+              <li className="nav-item dropdown">
+                <Link className="nav-link dropdown-toggle" to="" id="navbarDropdown" role="button"
+                  data-bs-toggle="dropdown" aria-expanded="false" style={{fontWeight:'500', fontFamily:'Arial'}}>
                   Salon Nearby
                 </Link>
                 <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -39,7 +50,7 @@ const Navbar = (props) => {
               </li>
 
               <li className="nav-item">
-                <NavLink onClick={()=>setshow(false)} style={{ textDecoration: 'none', color: 'black', margin: '0px 10px 0px 10px' }} activeClassName='active' className="nav-link" to="/category">Category</NavLink>
+                <NavLink onClick={()=>setshow(false)} style={{ textDecoration: 'none', color: 'black', margin: '0px 10px 0px 10px' }} activeClassName='active' className="nav-link" to="/salons">Salons</NavLink>
               </li>
               <li className="nav-item">
                 <NavLink onClick={()=>setshow(false)} style={{ textDecoration: 'none', color: 'black', margin: '0px 10px 0px 10px' }} activeClassName='active' className="nav-link" to="/booking">Booking</NavLink>

@@ -35,8 +35,10 @@ const Dashboard = () => {
     const [specialist, setspecialist] = useState(false);
     const [categorys, setcategorys] = useState(false);
 
+
+
     const Arr3 = [
-        { id: 1, name: "anand" },
+        { id: 1, name: "anand"},
         { id: 2, name: "anand" },
         { id: 3, name: "anand" },
         { id: 4, name: "anand" },

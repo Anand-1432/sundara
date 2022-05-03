@@ -61,7 +61,7 @@ const Bookhistory = () => {
             name: 'anand',
             time:'12',
             amount:'1234',
-            status:'Done'
+            status:'done'
         },
     ]
 

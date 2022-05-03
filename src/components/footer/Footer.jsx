@@ -15,7 +15,7 @@ const Footer = () => {
       <div
         className='container-fluid mt-5 px-0'
         id='cardcontainer'
-        data-aos='fade-up'
+        // data-aos='fade-up'
       >
         <div className='footer w-100'>
           <div className='row mb-4'>
