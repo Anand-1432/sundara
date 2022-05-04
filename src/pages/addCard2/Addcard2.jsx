@@ -3,6 +3,7 @@ import Footer from '../../components/footer/Footer'
 import './addcard2.scss'
 
 import men from '../../assets/men1.png'
+import { Link } from 'react-router-dom'
 
 const Addcard2 = () => {
     return (
@@ -70,7 +71,7 @@ const Addcard2 = () => {
 
             <div className='continue'>
                 <p>Total Amount = $9000</p>
-                <button className='btn'>continue</button>
+                <Link to='/schedule' className='btn'>continue</Link>
             </div>
 
             <Footer />

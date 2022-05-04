@@ -16,6 +16,7 @@ import Nearmen from "./pages/near_men/Nearmen";
 import Nearwomen from "./pages/near_women/Nearwomen";
 import Addcard from "./pages/addCard/Addcard";
 import Addcard2 from "./pages/addCard2/Addcard2";
+import Schedule from "./pages/schedule/Schedule";
 
 
 function App() {
@@ -32,8 +33,9 @@ function App() {
         <Route path="/category/women_salon" element={<Women/>}/>
         <Route path="/salon_nearby/men_salon" element={<Nearmen/>}/>
         <Route path="/salon_nearby/women_salon" element={<Nearwomen/>}/>
-        <Route path="addcard" element={<Addcard/>}/>
-        <Route path="addcard2" element={<Addcard2/>}/>
+        <Route path="/addcard" element={<Addcard/>}/>
+        <Route path="/addcard2" element={<Addcard2/>}/>
+        <Route path="/schedule" element={<Schedule/>}/>
         <Route path="/booking" element={<Booking/>}/>
         <Route path="/salons" element={<Category/>}/>
         <Route path="/team" element={<Team/>}/>
