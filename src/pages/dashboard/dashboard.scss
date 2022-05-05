@@ -86,13 +86,25 @@
     padding-top: 30px;
     padding-bottom: 30px;
     margin-top: 70px;
+
+    .date{
+       width: 100%;
+       display: flex;
+       align-items: center;
+        input{
+            width: 150px;
+            height: 40px;
+            margin: auto;
+        }
+    }
+
+    .bookings {
+        width: 90%;
+        margin: auto;
+        padding-left: 50px;
+    }
 }
 
-.bookings {
-    width: 90%;
-    margin: auto;
-    padding-left: 50px;
-}
 
 .categoryConatiner {
     width: 73%;

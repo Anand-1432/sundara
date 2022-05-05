@@ -107,6 +107,9 @@ const Dashboard = () => {
 
 
             <div className='bookSection'>
+
+              <div className='date'> <input type="date" value=""/> </div>
+
                 <div className='bookings'>
 
                     {Arr3.map((value, index) => {

@@ -1,8 +1,22 @@
+.dates{
+  width: 100%;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+
+  input{
+      width: 150px;
+      height: 30px;
+  }
+}
+
 .bookingCon{
     width: 90%;
     margin: auto;
     padding-left: 70px;
 }
+
 
 @media (max-width:600px) {
     .bookingCon{

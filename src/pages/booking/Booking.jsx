@@ -46,6 +46,11 @@ const Booking = () => {
 
     return (
         <>
+
+            <div className='dates'>
+                <input type="date" name="" id="" />
+            </div>
+
             <div className='bookingCon'>
 
                 {Arr3.map((value, index) => {
