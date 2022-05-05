@@ -12,56 +12,56 @@ const Bookhistory = () => {
             name: 'anand',
             time:'12',
             amount:'1234',
-            status:'Done'
+            status:'done'
         },
         {
             id: 2,
             name: 'anand',
             time:'12',
             amount:'1234',
-            status:'Done'
+            status:'pending'
         },
         {
             id: 3,
             name: 'anand',
             time:'12',
             amount:'1234',
-            status:'Done'
+            status:'done'
         },
         {
             id: 4,
             name: 'anand',
             time:'12',
             amount:'1234',
-            status:'Done'
+            status:'cancel'
         },
         {
             id: 5,
             name: 'anand',
             time:'12',
             amount:'1234',
-            status:'Done'
+            status:'done'
         },
         {
             id: 6,
             name: 'anand',
             time:'12',
             amount:'1234',
-            status:'Done'
+            status:'done'
         },
         {
             id: 7,
             name: 'anand',
             time:'12',
             amount:'1234',
-            status:'Done'
+            status:'done'
         },
         {
             id: 8,
             name: 'anand',
             time:'12',
             amount:'1234',
-            status:'done'
+            status:'cancel'
         },
     ]
 
@@ -119,13 +119,18 @@ const Bookhistory = () => {
                     <tbody>
 
                         {tableData.map((value, index) => {
+                            
                             return (
                                 <tr key={index}>
                                     <td>{value.name}</td>
                                     <td>{value.id}</td>
                                     <td>{value.time}:00 Pm</td>
                                     <td>{value.amount}</td>
-                                    <td>{value.status}</td>
+                                    {value.status==="done"?
+                                    <td id='done'>{value.status}</td>:
+                                     value.status==="pending"?
+                                     <td id='pending'>{value.status}</td>:<td id='cancel'>{value.status}</td>
+                                    }
                                 </tr>
                             );
                         })}
