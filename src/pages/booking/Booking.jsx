@@ -1,7 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Bookingcard from '../../components/booking_card/Bookingcard'
 import Footer from '../../components/footer/Footer'
 import './booking.scss'
+
+import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css'
 
 const Booking = () => {
 
@@ -44,11 +47,30 @@ const Booking = () => {
         },
     ]
 
+    const [selectDate, setSelectDate] = useState(null);
+
+    const getDate = (date) =>{
+
+        console.log(`${date.getDate()}/${date.getMonth()+1}/${date.getFullYear()}`);
+    }
+
     return (
         <>
 
             <div className='dates'>
-                <input type="date" name="" id="" />
+               <div className='dateData'>
+                <DatePicker
+                    selected={selectDate}
+                    onChange={date => {
+                        setSelectDate(date);
+                        getDate(date);
+                        }}
+                    dateFormat='dd/MM/yyyy'
+                    placeholderText='Select Booking Date'
+                    minDate={new Date()}
+                    className='mainDate'
+                />
+               </div>
             </div>
 
             <div className='bookingCon'>

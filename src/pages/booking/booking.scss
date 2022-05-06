@@ -5,9 +5,20 @@
   display: flex;
   justify-content: center;
 
-  input{
-      width: 150px;
-      height: 30px;
+  .dateData{
+      width: 150px ;
+      height: 30px;   
+      
+      .mainDate{
+          text-align: center;
+          width: 200px;
+          line-height: 40px;
+          background-color: black;
+          border: none;
+          border-radius: 5px;
+          box-shadow: 1px 1px 10px rgb(174, 178, 183);
+          color: white;
+      }
   }
 }
 

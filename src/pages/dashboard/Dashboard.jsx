@@ -29,6 +29,10 @@ import Gallerycard from '../../components/gallery_card/Gallerycard';
 import Specialistcard from '../../components/specialist_card/Specialistcard';
 import Editspecialist from '../../components/editspecialist/Editspecialist';
 
+
+import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css'
+
 const Dashboard = () => {
 
     const [gallery, setgallery] = useState(false);
@@ -38,7 +42,7 @@ const Dashboard = () => {
 
 
     const Arr3 = [
-        { id: 1, name: "anand"},
+        { id: 1, name: "anand" },
         { id: 2, name: "anand" },
         { id: 3, name: "anand" },
         { id: 4, name: "anand" },
@@ -47,12 +51,12 @@ const Dashboard = () => {
     ]
 
     const Category = [
-        { id: 1, name: "anand", img:r2 },
-        { id: 2, name: "anand", img:r3 },
-        { id: 3, name: "anand", img:r4 },
-        { id: 4, name: "anand", img:r5 },
-        { id: 5, name: "anand", img:r6 },
-        { id: 6, name: "anand", img:r7 },
+        { id: 1, name: "anand", img: r2 },
+        { id: 2, name: "anand", img: r3 },
+        { id: 3, name: "anand", img: r4 },
+        { id: 4, name: "anand", img: r5 },
+        { id: 5, name: "anand", img: r6 },
+        { id: 6, name: "anand", img: r7 },
     ]
 
     const Gallery = [
@@ -72,6 +76,12 @@ const Dashboard = () => {
         { id: 6, title: "Spa", data: "hair specialist", img: e2 },
     ]
 
+    const [selectDate, setSelectDate] = useState(null);
+
+    const getDate = (date) =>{
+
+        console.log(`${date.getDate()}/${date.getMonth()+1}/${date.getFullYear()}`);
+    }
 
     return (
         <>
@@ -108,7 +118,22 @@ const Dashboard = () => {
 
             <div className='bookSection'>
 
-              <div className='date'> <input type="date" value=""/> </div>
+
+                <div className='dates'>
+                    <div className='dateData'>
+                        <DatePicker
+                            selected={selectDate}
+                            onChange={date => {
+                                setSelectDate(date);
+                                getDate(date);
+                            }}
+                            dateFormat='dd/MM/yyyy'
+                            placeholderText='Select Booking Date'
+                            minDate={new Date()}
+                            className='mainDate'
+                        />
+                    </div>
+                </div>
 
                 <div className='bookings'>
 
@@ -182,7 +207,7 @@ const Dashboard = () => {
 
             <div className='categoryHead'>
                 <span>Specialist</span>
-                <button className='btn' onClick={()=>setspecialist(true)}>Add New Specialist</button>
+                <button className='btn' onClick={() => setspecialist(true)}>Add New Specialist</button>
             </div>
 
             <div className='team dashTeam'>

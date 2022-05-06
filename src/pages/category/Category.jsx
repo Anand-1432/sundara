@@ -82,7 +82,7 @@ const Category = () => {
                 <button className='btn'>view all salon</button>
             </div>
 
-            <Card />
+            <Card/>
             <Card />
             <Card />
             <Card />
