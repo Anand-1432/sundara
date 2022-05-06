@@ -38,32 +38,190 @@
                 font-size: 12px;
                 margin-left: 12px;
             }
-            .proSection{
+
+            .proSection {
                 width: 100%;
                 margin-top: 20px;
                 position: relative;
 
-                img{
-                  width: 60px;
-                  height: 60px;
-                  border-radius: 50%;
+                img {
+                    width: 60px;
+                    height: 60px;
+                    border-radius: 50%;
                 }
-                section{
+
+                section {
                     position: absolute;
-                    top:10px;
+                    top: 10px;
                     left: 70px;
                     font-weight: bold;
                     font-size: 16px;
                 }
-                p{
+
+                p {
                     position: absolute;
-                    top:30px;
+                    top: 30px;
                     left: 70px;
                     margin-left: 0px;
                     color: gray;
                 }
             }
+
+            hr {
+                margin-top: 30px;
+                color: #a1a1a2;
+            }
+
+            .abouts{
+               section{
+                   font-weight: bold;
+                   font-size: 18px;
+               }
+               #datas{
+                   margin-top: 20px;
+                   margin-left: 0px;
+                   font-size: 14px;
+                   color: #88878F;
+               }
+            }
+            .location{
+                p{
+                    font-weight: bold;
+                    font-size: 18px;
+                    margin-left: 0px;
+                }
+                img{
+                    width: 100%;
+                    height: auto;
+                }
+            }
         }
 
+        .commentSection {
+           
+            .salonTime {
+                width: 360px;
+                height: 240px;
+                border-radius: 10px;
+                box-shadow: 1px 1px 10px rgb(229, 229, 229);
+                padding: 20px;
+
+                h4 {
+                    font-weight: bold;
+                }
+
+                .gd {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+
+                    div {
+                        color: #88878F;
+                        font-weight: bold;
+                        margin-top: 28px;
+                        font-size: 14px;
+                    }
+
+                    .tts {
+                        text-align: end;
+                    }
+                }
+            }
+
+            .comments {
+                margin-top: 20px;
+                padding: 20px;
+                border-radius: 10px;
+                box-shadow: 1px 1px 10px rgb(229, 229, 229);
+
+                #head {
+                    font-weight: bold;
+                    font-size: 18px;
+                }
+
+                .com {
+                    width: 320px;
+                    height: 230px;
+                    position: relative;
+
+                    .times {
+                        text-align: end;
+                        font-size: 12px;
+                        font-weight: bold;
+                        color: #88878F;
+                    }
+
+                    img {
+                        width: 50px;
+                        height: 50px;
+                    }
+
+                    .name {
+                        font-weight: bold;
+                        position: absolute;
+                        top: 20px;
+                        left: 60px;
+                        font-size: 14px;
+                    }
+
+                    span {
+                        font-weight: 500;
+                        position: absolute;
+                        top: 40px;
+                        left: 60px;
+                        font-size: 12px;
+                    }
+
+                    p {
+                        margin-top: 10px;
+                        color: #88878F;
+                        font-size: 14px;
+                    }
+
+                    hr {
+                        margin-top: 30px;
+                        color: #a1a1a2;
+                    }
+                }
+            }
+
+            .Addcomment{
+                width: 360px;
+                padding: 40px;
+                margin-top: 20px;
+                height: 300px;
+                border-radius: 10px;
+                box-shadow: 1px 1px 10px rgb(229, 229, 229);
+
+                p{
+                    font-weight: bold;
+                    margin-top: -15px;
+                }
+                textarea{
+                    padding: 10px;
+                    background-color: #f0f0f2;
+                    border: none;
+                    border-radius: 5px;
+                }
+                .btn{
+                    background-color: #28ACEA;
+                    width: 100%;
+                    margin-top: 20px;
+                    color: white;
+                }
+            }
+        }
+
+    }
+}
+
+@media (max-width:768px) {
+    .salonHome{
+        .mainData{
+            .commentSection{
+                display: grid;
+                place-content: center;
+                margin-top: 50px;
+            }
+        }
     }
 }
