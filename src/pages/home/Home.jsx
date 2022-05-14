@@ -26,10 +26,17 @@ import Slider from '../../components/slider/Slider';
 import r1 from '../../assets/r1.png'
 import Footer from '../../components/footer/Footer'
 
+
+
 const Home = () => {
+
+
   return (
     <>
-      <Carousel 
+
+
+
+      <Carousel
         img1={r1}
         img2={r1}
         img3={r1}
@@ -39,9 +46,13 @@ const Home = () => {
         <div className='row features'>
           <div className='col-xl-6 col-lg-6'>
             <h2>Our Best Features</h2>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum blanditiis aliquam soluta quae. Qui cum corrupti dolores autem, ratione expedita molestias eveniet, iste provident officiis incidunt? Officiis unde hic impedit!
-              Non temporibus dolor, dolores repellendus dicta, earum odit illum eligendi magnam magni officia suscipit, totam laudantium quibusdam beatae quia et sequi ipsum atque nemo ullam! Dolore quos esse obcaecati perspiciatis?
-              Dignissimos aliquid voluptates quidem porro magni quia in expedita optio maiores, neque quisquam, error dolorum minus ea architecto reiciendis? Alias itaque earum suscipit eum delectus nobis officia quasi. Harum</p>
+            <p>Our Best Features
+              Sundara looks has organized all the salons, beauty parlors
+              and spas in your city, with the best deals. For us, there is
+              nothing more important than the health of you and your loved ones.
+              If you are looking for great beauty and wellness services,
+              you have found the right place. Book your appointment now.
+            </p>
 
             <div className='container-fluid part'>
               <div className='row'>
@@ -84,10 +95,11 @@ const Home = () => {
           <div className='col-xl-6 col-lg-6 aboutdata'>
             <h4 id='head1'>About us</h4>
             <h2>Welcome To Shop</h2>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum blanditiis aliquam soluta quae. Qui cum corrupti dolores autem, ratione expedita molestias eveniet, iste provident officiis incidunt? Officiis unde hic impedit!
-              Non temporibus dolor, dolores repellendus dicta, earum odit illum eligendi magnam magni officia suscipit, totam laudantium quibusdam beatae quia et sequi ipsum atque nemo ullam! Dolore quos esse obcaecati perspiciatis?
-              Dignissimos aliquid voluptates quidem porro magni quia in expedita optio maiores, neque quisquam, error dolorum minus ea architecto reiciendis? Alias itaque earum suscipit eum delectus nobis officia quasi. Harum
-            </p>
+            <p>We will help you find the best beauty salons
+              in your neighbourhood and enable you to book instantly.
+              Search and book your favorite salon and beauty parlor with
+              the most trusted salons and beauty parlors directory in India.
+              Get full body care on the go, no hassles.</p>
           </div>
         </div>
       </div>
@@ -129,24 +141,24 @@ const Home = () => {
 
       <h2 className='h2'>Our Expert Team</h2>
       <div className='team'>
-              <div className=' content'>
-                <img id='img' src={e1} alt="" />
-                <h5>Emma Watson</h5>
-                <p id='p1'>haircut & massage specialist</p>
-              </div>
+        <div className=' content'>
+          <img id='img' src={e1} alt="" />
+          <h5>Emma Watson</h5>
+          <p id='p1'>haircut & massage specialist</p>
+        </div>
 
-              <div className='content'>
-                <img id='img' src={e2} alt="" />
-                <h5>James Franco</h5>
-                <p id='p1'> dicta, earum odit</p>
-              </div>
+        <div className='content'>
+          <img id='img' src={e2} alt="" />
+          <h5>James Franco</h5>
+          <p id='p1'> dicta, earum odit</p>
+        </div>
 
-              <div className='content'>
-                <img id='img' src={e3} alt="" />
-                <h5>San Watson</h5>
-                <p id='p1'> dicta, earum</p>
-              </div>
-          </div>
+        <div className='content'>
+          <img id='img' src={e3} alt="" />
+          <h5>San Watson</h5>
+          <p id='p1'> dicta, earum</p>
+        </div>
+      </div>
 
       <div className='blog'>
         <h2>Our Blogs</h2>
@@ -182,7 +194,7 @@ const Home = () => {
         </div>
       </div>
 
-      <Footer/>
+      <Footer />
 
     </>
   )

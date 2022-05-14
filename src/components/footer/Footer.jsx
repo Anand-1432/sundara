@@ -22,10 +22,10 @@ const Footer = () => {
             <div className="col-md-4 col-sm-4 col-xs-4">
               <div className="footer-text pull-left">
                 <div className="d-flex">
-                  <h1 style={{ color: 'White' }}>Sundara</h1>
+                  <h1 style={{ color: 'White' }}>Sundara Looks</h1>
                 </div>
                 <p className="card-text">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita ullam voluptatem rerum maiores suscipit mollitia</p>
+                Get the bodycare you deserve Just search and book.</p>
                 <div className="social mt-2 mb-3">
                   <a className='fa' href="https://www.instagram.com/aavahan_2k22/" target='1'><Facebook /></a>
                   <a className="fa" href='https://wa.me/8103570600' target="1"><Insta /></a>
@@ -56,7 +56,7 @@ const Footer = () => {
               <ul className='card-text'>
                 <li><a href='/'><Call/> xxxxxxxxxxxxx</a></li>
                 <li>
-                  <a href='/'><Mail/> xxxxxxxxxx@gmail.com</a>
+                  <a href='/'><Mail/> contact@sundaralooks.com</a>
                 </li>
                 <li><AddLocationAltIcon /> Lorem ipsum dolor sit amet, consectetur adipisicing
                   elit. Magnam cum placeat eaque esse architecto,</li>

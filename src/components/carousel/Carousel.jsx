@@ -15,22 +15,22 @@ const Carousel = (props) => {
     <div class="carousel-item active">
       <img src={props.img1} class="d-block w-100" alt="..."/>
       <div class="carousel-caption d-none d-md-block">
-        <h5>First slide label</h5>
-        <p>Some representative placeholder content for the first slide.</p>
+        <h5>We're  Passionate about your Grooming</h5>
+        <p>For all clients, the Sundara Looks experience is the ultimate word for style and skin care.</p>
       </div>
     </div>
     <div class="carousel-item">
       <img src={props.img2} class="d-block w-100" alt="..."/>
       <div class="carousel-caption d-none d-md-block">
-        <h5>Second slide label</h5>
-        <p>Some representative placeholder content for the second slide.</p>
+        <p>Sundara Looks for Hair and Skincare takes pleasure in providing you with 
+        the most recent and greatest hairstyles and beauty treatments, resulting
+         in the highest levels of style, sensibility, and elegance.</p>
       </div>
     </div>
     <div class="carousel-item">
       <img src={props.img3} class="d-block w-100" alt="..."/>
       <div class="carousel-caption d-none d-md-block">
-        <h5>Third slide label</h5>
-        <p>Some representative placeholder content for the third slide.</p>
+        <p>Treat yourself to some tadka in the hottest hair colors. Looking good is not an act, it's a habit.</p>
       </div>
     </div>
   </div>

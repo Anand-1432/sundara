@@ -19,20 +19,20 @@ const Team = () => {
             <div className='team'>
                 <div className=' content'>
                     <img id='img' src={e1} alt="" />
-                    <h5>Emma Watson</h5>
-                    <p id='p1'>haircut & massage specialist</p>
+                    <h5>Pooja</h5>
+                    <p id='p1'>Make-Up</p>
                 </div>
 
                 <div className='content'>
                     <img id='img' src={e2} alt="" />
-                    <h5>James Franco</h5>
-                    <p id='p1'> dicta, earum odit</p>
+                    <h5>Paras</h5>
+                    <p id='p1'>Hair Care</p>
                 </div>
 
                 <div id='img' className='content'>
                     <img id='img' src={e3} alt="" />
-                    <h5>San Watson</h5>
-                    <p id='p1'> dicta, earum</p>
+                    <h5>Ritik</h5>
+                    <p id='p1'>Skin Care</p>
                 </div>
             </div>
 
