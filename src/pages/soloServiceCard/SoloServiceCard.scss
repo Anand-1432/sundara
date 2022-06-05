@@ -1,0 +1,22 @@
+.AddCards{
+
+    margin-top: 50px;
+
+    #imgs{
+      width: 100%;
+      height: auto;
+    }
+
+    .contents{
+        .pri{
+            font-weight: bold;
+            color: #28ACEA;
+        }
+        .btn{
+           background-color:#28ACEA;
+           color: white;
+           font-size: 14px;
+           padding: 6px 25px 6px 25px;
+        }
+    }
+}

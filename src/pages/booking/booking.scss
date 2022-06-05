@@ -1,33 +1,25 @@
-.dates{
-  width: 100%;
-  margin-top: 50px;
-  margin-bottom: 30px;
-  display: flex;
-  justify-content: center;
-
-  .dateData{
-      width: 150px ;
-      height: 30px;   
-      
-      .mainDate{
-          text-align: center;
-          width: 200px;
-          line-height: 40px;
-          background-color: black;
-          border: none;
-          border-radius: 5px;
-          box-shadow: 1px 1px 10px rgb(174, 178, 183);
-          color: white;
-      }
-  }
-}
-
 .bookingCon{
-    width: 90%;
-    margin: auto;
-    padding-left: 70px;
+	width: 90%;
+	background-color: white;
+	margin: 0 auto;
+	padding: 30px 40px;
 }
-
+.services-deck-wrapper{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+}
+.services-selected{
+	min-height: 415px;
+}
+p.subheading{
+	font-size: 20px;
+	margin-bottom: 0;
+	font-family: "Fira Sans", sans-serif;
+}
+.login-hr.small-one-hr{
+	width: 40px;
+	height: 1px !important;
+}
 
 @media (max-width:600px) {
     .bookingCon{
@@ -36,4 +28,29 @@
         display: grid;
         place-content: center;
     }
+}
+
+
+
+////////////////////////////////////////////////////////////////////
+
+@media (max-width:500px) {
+
+	.services-selected{
+	  min-height: 30px;	
+	}
+
+	.login-title, .login-hr, .subheading{
+		margin-left: 30px;
+	}
+    .services-deck-wrapper{
+	  grid-template-columns: 1fr;
+	  padding-left: 30px !important;
+	}
+
+	.button-booking{
+		width: 280px !important;
+		margin-left: 40px !important;
+	}
+	
 }

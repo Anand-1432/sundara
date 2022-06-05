@@ -56,6 +56,30 @@
     }
 }
 
+.dashgallery {
+    span {
+        position: relative;
+
+        .btn {
+            position: absolute;
+            top: 75px;
+            left: 130px;
+            color: white;
+            background-color: rgb(0, 0, 0, 0.5);
+            border: 1px solid white;
+            display: none;
+        }
+    }
+
+    span:hover{
+        img{
+            opacity: 0.4;
+        }
+        .btn{
+            display: block;
+        }
+    }
+}
 
 .dashTeam{
     h5{
@@ -86,25 +110,13 @@
     padding-top: 30px;
     padding-bottom: 30px;
     margin-top: 70px;
-
-    .date{
-       width: 100%;
-       display: flex;
-       align-items: center;
-        input{
-            width: 150px;
-            height: 40px;
-            margin: auto;
-        }
-    }
-
-    .bookings {
-        width: 90%;
-        margin: auto;
-        padding-left: 50px;
-    }
 }
 
+.bookings {
+    width: 90%;
+    margin: auto;
+    padding-left: 50px;
+}
 
 .categoryConatiner {
     width: 73%;

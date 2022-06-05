@@ -16,8 +16,11 @@ import Card from '../../components/card/Card';
 
 import Banner from '../../assets/Banner.png'
 import Footer from '../../components/footer/Footer';
+import { useCollection } from '../../hooks/useCollection';
 
 const Category = () => {
+
+	const {documents: salons} = useCollection("salons")
     return (
         <>
             <Carousel
@@ -81,15 +84,16 @@ const Category = () => {
                 <span>Salon</span>
                 <button className='btn'>view all salon</button>
             </div>
+			{salons && salons.map((salon) => (
+				<Card
+					key={salon.id}
+					sId={salon.id}
+					name={salon.name}
+					owner={{...salon.owner}}
+				/>
+			))}            
 
-            <Card/>
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-
-            <div className='blog blogBg'>
+            {/* <div className='blog blogBg'>
                 <h2>Blogs</h2>
                 <div className='container salon'>
                     <div className='row'>
@@ -121,7 +125,7 @@ const Category = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
 
             <Footer />
         </>

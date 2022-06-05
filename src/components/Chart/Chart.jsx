@@ -1,50 +1,95 @@
-import React from 'react'
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend} from 'recharts';
+import React, { useState, useEffect } from "react";
+import { useCollection } from "../../hooks/useCollection";
 
-const Chart = () => {
+import {
+    BarChart,
+    Bar,
+    XAxis,
+    YAxis,
+    CartesianGrid,
+    Tooltip,
+    Legend,
+} from "recharts";
 
-    const data = [
-        {day:1, progress: 200},
-        {day:2, progress: 1000},
-        {day:3, progress: 2000},
-        {day:4, progress: 500},
-        {day:5, progress: 600},
-        {day:6, progress: 900},
-        {day:7, progress: 230},
-        {day:8, progress: 270},
-        {day:9, progress: 570},
-        {day:10, progress: 800},
-        {day:11, progress: 400},
-        {day:12, progress: 900},
-        {day:13, progress: 1900},
-        {day:14, progress: 1500},
-        {day:15, progress: 300},
-    ]
+const Chart = ({ salon, monthToDisplay }) => {
+    const [chartData, setChartData] = useState([]);
 
+    var queryArr = salon ? ["salonId", "==", `${salon.id}`] : null;
+    const { documents: bookings } = useCollection("bookings", queryArr);
+
+	console.log(bookings ? bookings : null)
+
+    useEffect(() => {
+        const getEarningsForDay = (day, month) => {
+            const netEarnings = bookings
+                ? bookings
+                      .filter(function (booking) {
+                          return (
+                              booking.slot.day === day &&
+                              booking.slot.month === month
+                          );
+                      })
+                      .reduce(function (acc, booking) {
+                          acc = acc + parseInt(booking.price);
+                          return acc;
+                      }, 0)
+                : null;
+            return netEarnings;
+        };
+
+        const getnumberOfDays = (month) => {
+            var dt = new Date();
+            var year = dt.getFullYear();
+            var daysInMonth = new Date(year, month, 0).getDate();
+            return daysInMonth;
+        };
+
+        const getChartDataforMonth = (month) => {
+            let data = [];
+
+            for (let i = 1; i <= getnumberOfDays(month); i++) {
+                data.push({
+                    Day: i,
+                    Earnings: getEarningsForDay(i, month),
+                });
+            }
+            setChartData([...data]);
+        };
+        getChartDataforMonth(monthToDisplay);
+    }, [bookings, monthToDisplay]);
+    // console.log(chartData)
 
     return (
         <>
             <BarChart
-                width={1000}
+                width={1200}
                 height={400}
-                data={data}
+                data={chartData}
                 margin={{
                     top: 5,
                     right: 30,
                     left: 20,
                     bottom: 5,
                 }}
-                barSize={20}
+                barSize={15}
             >
-                <XAxis dataKey="day" scale="point" padding={{ left: 10, right: 10 }} />
+                <XAxis
+                    dataKey="Day"
+                    scale="point"
+                    padding={{ left: 10, right: 10 }}
+                />
                 <YAxis />
                 <Tooltip />
                 <Legend />
                 <CartesianGrid strokeDasharray="3 3" />
-                <Bar dataKey="progress" fill="#30D5C8" background={{ fill: '#eee' }} />
+                <Bar
+                    dataKey="Earnings"
+                    fill="#30D5C8"
+                    background={{ fill: "#eee" }}
+                />
             </BarChart>
         </>
-    )
-}
+    );
+};
 
-export default Chart
+export default Chart;

@@ -1,11 +1,9 @@
-import React, { useState } from 'react'
-import Editoffer from '../editoffer/Editoffer';
+import React, {useState} from 'react'
+import Editoffer from "../editoffer/Editoffer";
 import './offercard.scss'
 
 const Offercard = (props) => {
-
-    const [off, setoff] = useState(false);
-
+	const [off, setoff] = useState(false);
     return (
         <>
             <div className="card offercard" style={{ width: '18rem', display: 'inline-block' }}>
@@ -23,7 +21,6 @@ const Offercard = (props) => {
                         img={props.img}
 
                     /> : null}
-
                 </div>
             </div>
         </>

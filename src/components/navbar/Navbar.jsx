@@ -1,86 +1,216 @@
-import React, { useState } from 'react';
-import './navbar.scss'
-import PersonIcon from '@material-ui/icons/Person';
+import React, { useState, useEffect } from "react";
+import "./navbar.scss";
+import PersonIcon from "@material-ui/icons/Person";
 
-import logo from '../../assets/img1.png'
-import { NavLink, Link } from 'react-router-dom';
+import logo from "../../assets/img1.png";
+import { NavLink, Link, useLocation, useNavigate } from "react-router-dom";
+import profile from "../../assets/profile.png";
+import { Dropdown } from "react-bootstrap";
+import { useAuthContext } from "../../hooks/useAuthContext";
+import { useLogout } from "../../hooks/useLogout";
+import { useUser } from "../../hooks/useUser";
 
 const Navbar = (props) => {
+    const location = useLocation();
+    const navigate = useNavigate();
+    const [userFromDB, setUserFromDB] = useState({});
 
-  const [show, setshow] = useState(false);
+    const { user: userContext } = useAuthContext();
+    const { logout } = useLogout();
+    const [show, setShow] = useState(false);
+    const { user } = props;
 
-  return (
-    <>
-      <nav className="navbar navbar-expand-lg navbar-dark">
-        <div className="container-fluid">
-          <a className="navbar-brand" href="/"><img src={logo} alt="..." /></a>
-          <button onClick={()=>setshow(!show)} className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div className={`collapse navbar-collapse ${show ? "show" : ""}`}>
-            <ul className="navbar-nav m-auto mb-2 mb-lg-0">
+    const queryString = location.search;
+    const queryParams = new URLSearchParams(queryString);
+    const clickType = queryParams.get("click-type");
 
-              <li className="nav-item">
-                <NavLink onClick={()=>setshow(false)} style={{ textDecoration: 'none', color: 'black', margin: '0px 10px 0px 10px' }} activeClassName='active' className="nav-link" to="/">Home</NavLink>
-              </li>
-              <li className="nav-item">
-                <NavLink onClick={()=>setshow(false)} style={{ textDecoration: 'none', color: 'black', margin: '0px 10px 0px 10px' }} activeClassName='active' className="nav-link" to="/dashboard">Dashboard</NavLink>
-              </li>
+    return (
+        <>
+            <nav>
+                <div className="brand">
+                    <div className="brand-wrapper">
+                        <img src={logo} alt="" />
+                    </div>
+                </div>
+                <div className="navigation">
+                    <div className="link-wrapper">
+                        <NavLink
+                            onClick={() => setShow(false)}
+                            style={{
+                                textDecoration: "none",
+                                color: "black",
+                                // margin: "0px 10px 0px 10px",
+                            }}
+                            to="/"
+                        >
+                            <p
+                                className={`nav-link-text ${
+                                    location.pathname === "/" ? "active" : null
+                                }`}
+                            >
+                                Home
+                            </p>
+                        </NavLink>
 
-              <li className="nav-item dropdown">
-                <Link className="nav-link dropdown-toggle" to="" id="navbarDropdown" role="button"
-                  data-bs-toggle="dropdown" aria-expanded="false" style={{fontWeight:'500', fontFamily:'Arial'}}>
-                  Category
-                </Link>
-                <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><Link onClick={()=>setshow(false)} className="dropdown-item text-center" to="/category/men_salon">Men Salon</Link></li>
-                  <li><Link onClick={()=>setshow(false)} className="dropdown-item text-center" to="/category/women_salon">Women Salon</Link></li>
-                </ul>
-              </li>
+                        <div
+                            className={`hr ${
+                                location.pathname === "/" ? "active" : null
+                            }`}
+                        ></div>
+                    </div>
+                    <div className="link-wrapper">
+                        <NavLink
+                            onClick={() => setShow(false)}
+                            style={{
+                                textDecoration: "none",
+                                color: "black",
+                                // margin: "0px 10px 0px 10px",
+                            }}
+                            to="/salonsNearby"
+                        >
+                            <p
+                                className={`nav-link-text ${
+                                    location.pathname === "/salonsNearby"
+                                        ? "active"
+                                        : null
+                                }`}
+                            >
+                                Salons Nearby
+                            </p>
+                        </NavLink>
 
-              <li className="nav-item dropdown">
-                <Link className="nav-link dropdown-toggle" to="" id="navbarDropdown" role="button"
-                  data-bs-toggle="dropdown" aria-expanded="false" style={{fontWeight:'500', fontFamily:'Arial'}}>
-                  Salon Nearby
-                </Link>
-                <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><Link onClick={()=>setshow(false)} className="dropdown-item text-center" to="/salon_nearby/men_salon">Men Salon</Link></li>
-                  <li><Link onClick={()=>setshow(false)} className="dropdown-item text-center" to="/salon_nearby/women_salon">Women Salon</Link></li>
-                </ul>
-              </li>
+                        <div
+                            className={`hr ${
+                                location.pathname === "/salonsNearby"
+                                    ? "active"
+                                    : null
+                            }`}
+                        ></div>
+                    </div>
+                    {userContext && (
+                        <>
+                            <div className="link-wrapper">
+                                <NavLink
+                                    onClick={() => setShow(false)}
+                                    style={{
+                                        textDecoration: "none",
+                                        color: "black",
+                                        // margin: "0px 10px 0px 10px",
+                                    }}
+                                    to="/dashboard"
+                                >
+                                    <p
+                                        className={`nav-link-text ${
+                                            location.pathname === "/dashboard"
+                                                ? "active"
+                                                : null
+                                        }`}
+                                    >
+                                        Dashboard
+                                    </p>
+                                </NavLink>
 
-              <li className="nav-item">
-                <NavLink onClick={()=>setshow(false)} style={{ textDecoration: 'none', color: 'black', margin: '0px 10px 0px 10px' }} activeClassName='active' className="nav-link" to="/salons">Salons</NavLink>
-              </li>
-              <li className="nav-item">
-                <NavLink onClick={()=>setshow(false)} style={{ textDecoration: 'none', color: 'black', margin: '0px 10px 0px 10px' }} activeClassName='active' className="nav-link" to="/booking">Booking</NavLink>
-              </li>
-              <li className="nav-item">
-                <NavLink onClick={()=>setshow(false)} style={{ textDecoration: 'none', color: 'black', margin: '0px 10px 0px 10px' }} activeClassName='active' className="nav-link" to="/team">Team</NavLink>
-              </li>
-              <li className="nav-item">
-                <NavLink onClick={()=>setshow(false)} style={{ textDecoration: 'none', color: 'black', margin: '0px 10px 0px 10px' }} activeClassName='active' className="nav-link" to="/offer">Offer</NavLink>
-              </li>
-              <li className="nav-item">
-                <NavLink onClick={()=>setshow(false)} style={{ textDecoration: 'none', color: 'black', margin: '0px 10px 0px 10px' }} activeClassName='active' className="nav-link" to="/blog">Blog</NavLink>
-              </li>
-              <li className="nav-item">
-                <NavLink onClick={()=>setshow(false)} style={{ textDecoration: 'none', color: 'black', margin: '0px 10px 0px 10px' }} activeClassName='active' className="nav-link" to="/profile">Profile</NavLink>
-              </li>
+                                <div
+                                    className={`hr ${
+                                        location.pathname === "/dashboard"
+                                            ? "active"
+                                            : null
+                                    }`}
+                                ></div>
+                            </div>
+                        </>
+                    )}
+                </div>
+                {!userContext ? (
+                    <>
+                        <div className="no-user">
+                            <div className="link-wrapper">
+                                <NavLink
+                                    onClick={() => setShow(false)}
+                                    style={{
+                                        textDecoration: "none",
+                                        color: "black",
+                                        // margin: "0px 10px 0px 10px",
+                                    }}
+                                    to="/user-flow?click-type=signup"
+                                >
+                                    <p
+                                        className={`nav-link-text ${
+                                            clickType === "signup"
+                                                ? "active"
+                                                : null
+                                        }`}
+                                    >
+                                        Signup
+                                    </p>
+                                </NavLink>
 
-            </ul>
+                                <div
+                                    className={`hr ${
+                                        clickType === "signup" ? "active" : null
+                                    }`}
+                                ></div>
+                            </div>
+                            <hr className="signup" />
+                            <div className="link-wrapper">
+                                <NavLink
+                                    onClick={() => setShow(false)}
+                                    style={{
+                                        textDecoration: "none",
+                                        color: "black",
+                                        // margin: "0px 10px 0px 10px",
+                                    }}
+                                    to="/user-flow?click-type=login"
+                                >
+                                    <p
+                                        className={`nav-link-text ${
+                                            clickType === "login"
+                                                ? "active"
+                                                : null
+                                        }`}
+                                    >
+                                        Login
+                                    </p>
+                                </NavLink>
 
-            <ul className="navbar-nav ml-auto mb-2 mb-lg-0">
-              <li className="nav-item" style={{ marginBottom: '0px' }}>
-                <section className='login'><button onClick={() => props.fun(true)} className="nav-link" style={{ color: 'white', backgroundColor: 'black', border: 'none', margin: 'auto' }}><PersonIcon /><span> login </span></button></section>
-              </li>
-            </ul>
+                                <div
+                                    className={`hr ${
+                                        clickType === "login" ? "active" : null
+                                    }`}
+                                ></div>
+                            </div>
+                        </div>
+                    </>
+                ) : (
+                    <>
+                        <div className="profile">
+                            <NavLink
+                                style={{
+                                    textDecoration: "none",
+                                    color: "black",
+                                    // margin: "0px 10px 0px 10px",
+                                }}
+                                to={`/profile/${userContext.uid}`}
+                            >
+								{userContext.photoURL ? <>
+									<div className="profile-wrapper">
+                                    <img src={userContext.photoURL} alt="Profile" />
+                                </div>
+								</> : <>
+								<div className="profile-wrapper">
+                                    <img src={profile} alt="Profile" />
+                                </div>
+								</>}
+                                
+                            </NavLink>
 
-          </div>
-        </div>
-      </nav>
-    </>
-  );
-}
+                            <hr className="signup" />
+                        </div>
+                    </>
+                )}
+            </nav>
+        </>
+    );
+};
 
 export default Navbar;

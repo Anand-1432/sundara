@@ -1,31 +1,31 @@
 import React from 'react'
-import { useNavigate } from 'react-router-dom';
-
 import './card.scss'
 
 import s1 from '../../assets/s1.png'
+import { useNavigate } from 'react-router'
 
-const Card = () => {
-  const navigate = useNavigate();
+const Card = ({name, owner,sId}) => {
 
-  const pusher = ()=>{
-     navigate('/salon_home');
-  }
+	let navigate = useNavigate()
 
   return (
-    <div className='container  CardContanier' onClick={()=>pusher()}>
-       <div className='row'>
-           <div className='col-lg-6 col-xl-6'>
-               <img src={s1} alt="" />
-           </div>
-           <div className='col-lg-6 col-xl-6'>
-               <h4>Amrut Salon</h4>
-               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae harum 
-               inventore aliquam ad rerum, voluptas temporibus dolores at facere </p>
-           </div>
-       </div>
-    </div>
-  )
+      <div
+          className="container  CardContanier"
+          onClick={() => navigate(`../salon/${sId}`, { replace: true })}
+      >
+          <div className="row">
+              <div className="col-lg-6 col-xl-6">
+                  <img src={s1} alt="" />
+              </div>
+              <div className="col-lg-6 col-xl-6">
+                  <h4>{name}</h4>
+                  <p>{owner.name}</p>
+                  <p>{sId}</p>
+                  <p>Salon Description</p>
+              </div>
+          </div>
+      </div>
+  );
 }
 
 export default Card

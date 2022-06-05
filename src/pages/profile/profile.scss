@@ -14,6 +14,32 @@
     color: white;
 }
 
+.edit-button-wrapper{
+	display: flex;
+	flex-direction: column;
+	
+	button{
+		width: 70%;
+		margin-left: auto;
+	}
+
+}
+
+.modal-wrapper-outer{
+	position: absolute;
+	margin-top: 10px;
+}
+
+.button-wrapper-modal{
+	display: flex;
+	// border: 1px solid black;
+	justify-content: space-between;
+}
+.btn-save{
+	margin-left: 20px;
+	width: 80% !important;
+}
+
 @media (max-width:500px) {
     .proCon {
         width: 95%;
@@ -44,7 +70,7 @@
                 margin-top: 2px;
                 margin-left: -2px;
                 border: none;
-                background-color: white;
+                // background-color: white;
             }
         }
 
@@ -117,6 +143,9 @@
 
 
 
+/////////////////////////////////////////////////////////////////////////////////////////
+
+
 @media (max-width:768px) {
     .proData {
         .edit {
@@ -126,6 +155,17 @@
                 margin-top: 30px;
             }
         }
+    }
+
+    #logout{
+        margin-top: 50px;
+    }
+
+}
+@media (max-width:380px) {
+    
+    #updatePhoto{
+        margin-top: 95px;
     }
 
 }
